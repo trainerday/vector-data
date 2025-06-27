@@ -1,8 +1,22 @@
 # Source Code Vector Database
 
-A ChromaDB-based vector database for semantic search across multiple GitHub repositories.
+A ChromaDB-based vector database for semantic search includes data ingestion from
+ - multiple GitHub repositories.
+ - mixpanel or other user event data 
+ - forums
+ - clicky
+ - email?
+ - youtube videos?
+ - blog posts
+ - main wordpress
+ - telegram
+ - github issues
 
-## Features
+
+
+
+
+## Features for git / code base
 
 - Clone and index multiple GitHub repositories
 - Semantic search using OpenAI embeddings
@@ -10,6 +24,14 @@ A ChromaDB-based vector database for semantic search across multiple GitHub repo
 - Respects .gitignore patterns
 - CLI interface for easy searching
 - Persistent vector storage with ChromaDB
+
+## Features for Mixpanel data
+
+- Smart incremental downloading from last existing file to yesterday
+- Automatic detection of missing days
+- Rate-limited API calls to respect Mixpanel limits
+- Configurable date ranges for historical data
+- Overwrite option for incomplete data files
 
 ## Setup
 
@@ -34,7 +56,7 @@ A ChromaDB-based vector database for semantic search across multiple GitHub repo
 
 ```bash
 # Index repositories for the first time
-python index_repos.py https://github.com/your-org/api-project.git https://github.com/your-org/web-project.git
+python git/index_repos.py https://github.com/your-org/api-project.git https://github.com/your-org/web-project.git
 ```
 
 ### Keep Repositories Updated
@@ -44,13 +66,13 @@ python index_repos.py https://github.com/your-org/api-project.git https://github
 python git/update_repos.py
 
 # Update specific repository
-python git/incremental_indexer.py --repo main-app-web
+python git_incremental_indexer.py --repo main-app-web
 
 # Update all repositories
-python git/incremental_indexer.py --all
+python git_incremental_indexer.py --all
 
 # Check for changes without pulling from remote
-python git/incremental_indexer.py --all --no-pull
+python git_incremental_indexer.py --all --no-pull
 ```
 
 ### Search Code
@@ -67,14 +89,36 @@ results = vectorizer.search_code("API endpoints", repo_filter="api-project")
 
 ```bash
 # Basic search
-python search_cli.py "user authentication"
+python git/search_cli.py "user authentication"
 
 # Search with filters
-python search_cli.py "database connection" --repo api-project --num-results 5
+python git/search_cli.py "database connection" --repo api-project --num-results 5
 
 # Show database stats
-python search_cli.py "query" --stats
+python git/search_cli.py "query" --stats
 ```
+
+### Mixpanel Data Download
+
+```bash
+# Incremental download (from last file to yesterday) - DEFAULT MODE
+python get_mixpanel_data.py
+
+# Force re-download of yesterday's data (useful if data was incomplete)
+python get_mixpanel_data.py --overwrite-last
+
+# Full download with custom date range
+python get_mixpanel_data.py --mode full --start-date 2024-01-01 --end-date 2024-12-31
+
+# Check available options
+python get_mixpanel_data.py --help
+```
+
+**Incremental Mode Behavior:**
+- If run today (June 27), it will check for yesterday (June 26)
+- If June 26 file exists: "Already up to date!" 
+- If June 26 file missing: Downloads June 26 data
+- With `--overwrite-last`: Always re-downloads the last existing file
 
 ## Supported Languages
 
@@ -116,13 +160,6 @@ Each code chunk includes:
 - **Removes chunks** for deleted files automatically
 - **Updates metadata** to track repository state
 
-### Update Process
-1. **Git pull** latest changes from remote
-2. **Compare commit hashes** to detect changes
-3. **Check file hashes** for modified files
-4. **Remove old chunks** for changed/deleted files
-5. **Index new chunks** for modified files
-6. **Update metadata** with new hashes and timestamps
 
 ## Performance
 

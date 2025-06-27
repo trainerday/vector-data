@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import time
 import sys
+import argparse
 
 class SmartMixpanelExporter:
     def __init__(self, username, password, project_id, output_dir="mixpanel_data"):
@@ -24,13 +25,31 @@ class SmartMixpanelExporter:
         self.auth_header = f"Basic {encoded}"
         self.base_url = "https://data.mixpanel.com/api/2.0/export"
         
-    def download_day(self, date):
+    def find_last_file_date(self):
+        """Find the date of the most recent existing file"""
+        files = list(self.output_dir.glob("mixpanel_*.json"))
+        if not files:
+            return None
+        
+        # Extract dates from filenames and sort
+        dates = []
+        for f in files:
+            try:
+                date_str = f.stem.replace("mixpanel_", "")
+                date = datetime.strptime(date_str, "%Y-%m-%d").date()
+                dates.append(date)
+            except:
+                continue
+        
+        return max(dates) if dates else None
+    
+    def download_day(self, date, force_download=False):
         """Download data for a single day with error handling"""
         date_str = date.strftime("%Y-%m-%d")
         output_file = self.output_dir / f"mixpanel_{date_str}.json"
         
-        # Skip if file already exists and has content
-        if output_file.exists() and output_file.stat().st_size > 2:
+        # Skip if file already exists and has content (unless force_download is True)
+        if not force_download and output_file.exists() and output_file.stat().st_size > 2:
             print(f"✓ {date_str} (cached)")
             return True, output_file.stat().st_size > 2
         
@@ -85,7 +104,7 @@ class SmartMixpanelExporter:
             print(f"❌ {date_str}: {e}")
             return False, False
     
-    def smart_download(self, start_date=None, end_date=None, days_back=730):
+    def smart_download(self, start_date=None, end_date=None, days_back=730, overwrite_last=False):
         """Smart download working backward from end_date"""
         if end_date:
             end_date = datetime.strptime(end_date, "%Y-%m-%d").date()
@@ -109,7 +128,9 @@ class SmartMixpanelExporter:
         current_date = end_date
         
         while current_date >= start_date:
-            success, has_data = self.download_day(current_date)
+            # Force download on the first iteration if overwrite_last is True
+            force_download = overwrite_last and current_date == end_date
+            success, has_data = self.download_day(current_date, force_download)
             
             if success:
                 successful += 1
@@ -135,6 +156,50 @@ class SmartMixpanelExporter:
                 print(f"📈 Progress: {days_processed} days processed, {successful} successful")
         
         return successful, failed, consecutive_empty
+    
+    def incremental_download(self, overwrite_last=False):
+        """Download data from last existing file to yesterday"""
+        yesterday = (datetime.now() - timedelta(days=1)).date()
+        
+        # Find the last existing file
+        last_file_date = self.find_last_file_date()
+        
+        if last_file_date is None:
+            print("📁 No existing files found. Starting from yesterday...")
+            start_date = yesterday
+        else:
+            if overwrite_last:
+                print(f"🔄 Starting from {last_file_date} (overwriting last file)")
+                start_date = last_file_date
+            else:
+                start_date = last_file_date + timedelta(days=1)
+                print(f"📁 Last file: {last_file_date}")
+                print(f"📅 Starting from: {start_date}")
+        
+        if start_date > yesterday:
+            print(f"✅ Already up to date! Last file: {last_file_date}, Yesterday: {yesterday}")
+            return 0, 0, 0
+        
+        print(f"🎯 Downloading from {start_date} to {yesterday}")
+        print(f"📊 Days to download: {(yesterday - start_date).days + 1}\n")
+        
+        successful = 0
+        failed = 0
+        current_date = start_date
+        
+        while current_date <= yesterday:
+            # Force download on the first day if we're overwriting last
+            force_download = overwrite_last and current_date == start_date
+            success, has_data = self.download_day(current_date, force_download)
+            
+            if success:
+                successful += 1
+            else:
+                failed += 1
+            
+            current_date += timedelta(days=1)
+        
+        return successful, failed, 0
     
     def generate_summary(self, successful, failed, consecutive_empty):
         """Generate download summary"""
@@ -179,6 +244,18 @@ class SmartMixpanelExporter:
             print(f"   Historical data appears limited beyond certain date")
 
 def main():
+    parser = argparse.ArgumentParser(description="Smart Mixpanel data downloader")
+    parser.add_argument("--mode", choices=["incremental", "full"], default="incremental",
+                       help="Download mode: incremental (from last file to yesterday) or full (custom range)")
+    parser.add_argument("--overwrite-last", action="store_true",
+                       help="Overwrite the last existing file (useful if yesterday's data was incomplete)")
+    parser.add_argument("--start-date", help="Start date for full mode (YYYY-MM-DD)")
+    parser.add_argument("--end-date", help="End date for full mode (YYYY-MM-DD)")
+    parser.add_argument("--days-back", type=int, default=730,
+                       help="Days back from end date for full mode (default: 730)")
+    
+    args = parser.parse_args()
+    
     # Configuration
     USERNAME = "export.f0228a.mp-service-account"
     PASSWORD = "tdqaGOIYi8zNirzKTQBP3MbzqkKhItwK"
@@ -188,14 +265,20 @@ def main():
     # Create exporter
     exporter = SmartMixpanelExporter(USERNAME, PASSWORD, PROJECT_ID, OUTPUT_DIR)
     
-    # Start immediately
-    print("🚀 Starting downloads immediately...")
-    
-    # Smart download (adjust days_back as needed)
     start_time = time.time()
     
-    # Download data (works backward from March 31, 2025 to January 1, 2024)
-    successful, failed, consecutive_empty = exporter.smart_download(start_date="2024-01-01", end_date="2025-03-31")
+    if args.mode == "incremental":
+        print("🚀 Starting incremental download...")
+        print("📅 Will download from last existing file to yesterday\n")
+        successful, failed, consecutive_empty = exporter.incremental_download(overwrite_last=args.overwrite_last)
+    else:
+        print("🚀 Starting full download...")
+        successful, failed, consecutive_empty = exporter.smart_download(
+            start_date=args.start_date,
+            end_date=args.end_date,
+            days_back=args.days_back,
+            overwrite_last=args.overwrite_last
+        )
     
     elapsed_time = time.time() - start_time
     exporter.generate_summary(successful, failed, consecutive_empty)
