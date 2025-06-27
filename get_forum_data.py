@@ -27,33 +27,46 @@ class DiscourseForumExporter:
         if not self.api_key:
             raise ValueError("Discourse API key required. Set DISCOURSE_API_KEY environment variable or pass api_key parameter.")
         
-        self.headers = {
+        # Try both authenticated and unauthenticated requests
+        self.auth_headers = {
             'Api-Key': self.api_key,
             'Api-Username': self.api_username,
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'User-Agent': 'TrainerDay Forum Scraper 1.0'
+        }
+        
+        self.public_headers = {
+            'Content-Type': 'application/json',
+            'User-Agent': 'TrainerDay Forum Scraper 1.0'
         }
         
         # Rate limiting: Discourse typically allows 60 requests per minute
         self.rate_limit_delay = 1  # 1 second between requests to be safe
         
-    def make_request(self, endpoint, params=None):
+    def make_request(self, endpoint, params=None, use_auth=False):
         """Make a rate-limited request to the Discourse API"""
-        url = f"{self.base_url}/admin/api{endpoint}" if endpoint.startswith('/admin') else f"{self.base_url}{endpoint}"
+        url = f"{self.base_url}{endpoint}"
         
         # Add .json extension if not present
         if not url.endswith('.json'):
             url += '.json'
         
+        headers = self.auth_headers if use_auth else self.public_headers
+        
         try:
             time.sleep(self.rate_limit_delay)
-            response = requests.get(url, headers=self.headers, params=params, timeout=30)
+            response = requests.get(url, headers=headers, params=params, timeout=30)
             
             if response.status_code == 200:
                 return response.json()
             elif response.status_code == 429:
                 print(f"⏱️  Rate limited, waiting 60 seconds...")
                 time.sleep(60)
-                return self.make_request(endpoint, params)  # Retry
+                return self.make_request(endpoint, params, use_auth)  # Retry
+            elif response.status_code == 403 and not use_auth:
+                # Try with authentication if public access fails
+                print(f"🔐 Public access failed, trying with authentication...")
+                return self.make_request(endpoint, params, use_auth=True)
             else:
                 print(f"❌ API Error {response.status_code}: {endpoint}")
                 return None
@@ -155,30 +168,31 @@ class DiscourseForumExporter:
         print(f"📊 Downloaded {total_topics} topics with {total_posts} total posts")
         return total_topics, total_posts
     
-    def get_users_batch(self, page=0):
-        """Get users with pagination"""
+    def get_directory_items(self, page=0, period='all', order='likes_received'):
+        """Get user directory (public endpoint)"""
         params = {
             'page': page,
-            'show_emails': 'false'  # Privacy: don't include emails
+            'period': period,
+            'order': order
         }
         
-        data = self.make_request('/admin/users/list/active', params)
+        data = self.make_request('/directory_items', params)
         
-        if data and isinstance(data, list):
-            return data
+        if data and 'directory_items' in data:
+            return data['directory_items']
         
         return []
     
-    def download_users(self, max_pages=10):
-        """Download user data (without sensitive information)"""
-        print("👥 Downloading user data...")
+    def download_users(self, max_pages=5):
+        """Download user data from public directory (without sensitive information)"""
+        print("👥 Downloading user data from directory...")
         
         all_users = []
         page = 0
         
         while page < max_pages:
-            print(f"👤 Processing users page {page}...")
-            users = self.get_users_batch(page)
+            print(f"👤 Processing directory page {page}...")
+            users = self.get_directory_items(page)
             
             if not users:
                 break
