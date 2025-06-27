@@ -74,6 +74,7 @@ git/repos/
 # Large data files
 mixpanel_data/
 forum_data/
+video_processing/
 
 # Temporary files
 *.tmp
@@ -88,3 +89,7 @@ forum_data/
 
 # pipenv
 Pipfile.lock
+.archive/
+mongo_data/
+*.crt
+chroma_db/

@@ -1,0 +1,2589 @@
+{
+  "processing_info": {
+    "source_method": "Complete Video Processing Pipeline",
+    "total_pages": 13,
+    "total_sentences": 263,
+    "enhancement_method": "OpenAI Vision Analysis with User Context",
+    "processing_date": null,
+    "video_file": "video_processing/FullTrainerDayForAI.mp4",
+    "audio_file": "video_processing/FullTrainerDayForAI_audio.mp3",
+    "include_screenshots": true,
+    "include_ai_analysis": false
+  },
+  "common_elements": {
+    "left_navigation": [
+      {
+        "item": "Calendar",
+        "description": "Training calendar and workout scheduling"
+      },
+      {
+        "item": "Activities",
+        "description": "Completed workout history and analysis"
+      },
+      {
+        "item": "Today",
+        "description": "Today's recommended workouts"
+      },
+      {
+        "item": "Search",
+        "description": "Search for workouts"
+      },
+      {
+        "item": "Workouts",
+        "description": "Workout library and favorites"
+      },
+      {
+        "item": "Plans",
+        "description": "Training plan management"
+      }
+    ],
+    "header_elements": [
+      {
+        "item": "User Menu",
+        "description": "User account and settings access"
+      },
+      {
+        "item": "FTP Value",
+        "description": "Link to View/Edit Profile Settings"
+      },
+      {
+        "item": "Notifications",
+        "description": "System notifications and alerts"
+      }
+    ],
+    "recurring_actions": [
+      {
+        "action": "Add Workout",
+        "description": "Primary action to add workouts to calendar"
+      },
+      {
+        "action": "Export",
+        "description": "Export functionality for various file formats"
+      },
+      {
+        "action": "Three Dots Menu",
+        "description": "Context menu for item-specific actions"
+      },
+      {
+        "action": "Refresh",
+        "description": "Refresh data from connected services"
+      },
+      {
+        "action": "Search",
+        "description": "Search within page content"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page_name": "Calendar",
+      "description": "Main calendar view for planning workouts",
+      "start_sentence": 0,
+      "end_sentence": 22,
+      "start_timestamp": 2.12,
+      "end_timestamp": 2898.67,
+      "relative_url": "/calendar",
+      "sentences": [
+        {
+          "sentence_id": 0,
+          "sentence": "We are currently on the calendar page.",
+          "start_timestamp": 2.12,
+          "end_timestamp": 5.94,
+          "mid_timestamp": 4.03,
+          "screenshot": "screenshots_web_full/sentence_000_mid_4.0s.jpg",
+          "screenshot_timestamp": 4.03
+        },
+        {
+          "sentence_id": 1,
+          "sentence": "This page allows a user to access various features.",
+          "start_timestamp": 5.94,
+          "end_timestamp": 10.24,
+          "mid_timestamp": 8.09,
+          "screenshot": "screenshots_web_full/sentence_001_mid_8.1s.jpg",
+          "screenshot_timestamp": 8.09
+        },
+        {
+          "sentence_id": 2,
+          "sentence": "There are small dots visible on the page, along with a menu that includes options such as convert to indoor, mark as completed, edit workout, reoccurrence, copy, and delete.",
+          "start_timestamp": 10.74,
+          "end_timestamp": 22.34,
+          "mid_timestamp": 16.54,
+          "screenshot": "screenshots_web_full/sentence_002_mid_16.5s.jpg",
+          "screenshot_timestamp": 16.54
+        },
+        {
+          "sentence_id": 3,
+          "sentence": "Users can also drag and drop a workout from one day to another.",
+          "start_timestamp": 73.78,
+          "end_timestamp": 79.66,
+          "mid_timestamp": 76.72,
+          "screenshot": "screenshots_web_full/sentence_003_mid_76.7s.jpg",
+          "screenshot_timestamp": 76.72
+        },
+        {
+          "sentence_id": 4,
+          "sentence": "On the week view, there are additional features available such as insert a week, copy a week, and clear a week.",
+          "start_timestamp": 80.16,
+          "end_timestamp": 88.56,
+          "mid_timestamp": 84.36,
+          "screenshot": "screenshots_web_full/sentence_004_mid_84.4s.jpg",
+          "screenshot_timestamp": 84.36
+        },
+        {
+          "sentence_id": 5,
+          "sentence": "There is a hamburger menu on the top right corner with a red icon, which contains features that can be activated.",
+          "start_timestamp": 201.86,
+          "end_timestamp": 207.14,
+          "mid_timestamp": 204.5,
+          "screenshot": "screenshots_web_full/sentence_005_mid_204.5s.jpg",
+          "screenshot_timestamp": 204.5
+        },
+        {
+          "sentence_id": 6,
+          "sentence": "One of these features is the ability to activate the calendar in the mobile app.",
+          "start_timestamp": 1092.38,
+          "end_timestamp": 1099.14,
+          "mid_timestamp": 1095.76,
+          "screenshot": "screenshots_web_full/sentence_006_mid_1095.8s.jpg",
+          "screenshot_timestamp": 1095.76
+        },
+        {
+          "sentence_id": 7,
+          "sentence": "Once activated, this calendar will appear in our mobile app.",
+          "start_timestamp": 1107.7,
+          "end_timestamp": 1112.42,
+          "mid_timestamp": 1110.06,
+          "screenshot": "screenshots_web_full/sentence_007_mid_1110.1s.jpg",
+          "screenshot_timestamp": 1110.06
+        },
+        {
+          "sentence_id": 8,
+          "sentence": "Users can also add a plan to their calendar, which will include a list of workouts.",
+          "start_timestamp": 1245.28,
+          "end_timestamp": 1253.26,
+          "mid_timestamp": 1249.27,
+          "screenshot": "screenshots_web_full/sentence_008_mid_1249.3s.jpg",
+          "screenshot_timestamp": 1249.27
+        },
+        {
+          "sentence_id": 9,
+          "sentence": "An export feature is available, allowing users to export different file types such as ERG, plan for Wahoo, ZWO, or MRC.",
+          "start_timestamp": 1412.31,
+          "end_timestamp": 1418.89,
+          "mid_timestamp": 1415.6,
+          "screenshot": "screenshots_web_full/sentence_009_mid_1415.6s.jpg",
+          "screenshot_timestamp": 1415.6
+        },
+        {
+          "sentence_id": 10,
+          "sentence": "Users can set the date range for the export.",
+          "start_timestamp": 1520.23,
+          "end_timestamp": 1522.97,
+          "mid_timestamp": 1521.6,
+          "screenshot": "screenshots_web_full/sentence_010_mid_1521.6s.jpg",
+          "screenshot_timestamp": 1521.6
+        },
+        {
+          "sentence_id": 11,
+          "sentence": "There is a calendar ICS file below that can be added to Google Calendar for easy viewing.",
+          "start_timestamp": 1989.35,
+          "end_timestamp": 1995.59,
+          "mid_timestamp": 1992.47,
+          "screenshot": "screenshots_web_full/sentence_011_mid_1992.5s.jpg",
+          "screenshot_timestamp": 1992.47
+        },
+        {
+          "sentence_id": 12,
+          "sentence": "The page also includes a navigation feature that allows users to go to different months and years, or move forward and backward a month.",
+          "start_timestamp": 1996.09,
+          "end_timestamp": 2005.69,
+          "mid_timestamp": 2000.89,
+          "screenshot": "screenshots_web_full/sentence_012_mid_2000.9s.jpg",
+          "screenshot_timestamp": 2000.89
+        },
+        {
+          "sentence_id": 13,
+          "sentence": "If a user moves forward a month and then clicks today, the calendar will automatically navigate to the current date.",
+          "start_timestamp": 2221.89,
+          "end_timestamp": 2228.27,
+          "mid_timestamp": 2225.08,
+          "screenshot": "screenshots_web_full/sentence_013_mid_2225.1s.jpg",
+          "screenshot_timestamp": 2225.08
+        },
+        {
+          "sentence_id": 14,
+          "sentence": "The calendar includes green boxes which represent completed activities, and blue boxes which represent planned activities.",
+          "start_timestamp": 2228.77,
+          "end_timestamp": 2235.17,
+          "mid_timestamp": 2231.97,
+          "screenshot": "screenshots_web_full/sentence_014_mid_2232.0s.jpg",
+          "screenshot_timestamp": 2231.97
+        },
+        {
+          "sentence_id": 15,
+          "sentence": "If a green box is connected to a blue box, it indicates that the completed activity is the same as the planned workout.",
+          "start_timestamp": 2235.67,
+          "end_timestamp": 2244.87,
+          "mid_timestamp": 2240.27,
+          "screenshot": "screenshots_web_full/sentence_015_mid_2240.3s.jpg",
+          "screenshot_timestamp": 2240.27
+        },
+        {
+          "sentence_id": 16,
+          "sentence": "Users can pair separate green and blue boxes by clicking on the three dots on the blue box and selecting pair.",
+          "start_timestamp": 2245.37,
+          "end_timestamp": 2253.77,
+          "mid_timestamp": 2249.57,
+          "screenshot": "screenshots_web_full/sentence_016_mid_2249.6s.jpg",
+          "screenshot_timestamp": 2249.57
+        },
+        {
+          "sentence_id": 17,
+          "sentence": "There is a plus button at the top of the page which allows users to add special types of workouts, such as strength, that can be repeated each day.",
+          "start_timestamp": 2296.15,
+          "end_timestamp": 2305.77,
+          "mid_timestamp": 2300.96,
+          "screenshot": "screenshots_web_full/sentence_017_mid_2301.0s.jpg",
+          "screenshot_timestamp": 2300.96
+        },
+        {
+          "sentence_id": 18,
+          "sentence": "Users can also add a custom workout or create a new workout, add a plan, or add a note.",
+          "start_timestamp": 2362.91,
+          "end_timestamp": 2368.91,
+          "mid_timestamp": 2365.91,
+          "screenshot": "screenshots_web_full/sentence_018_mid_2365.9s.jpg",
+          "screenshot_timestamp": 2365.91
+        },
+        {
+          "sentence_id": 19,
+          "sentence": "The most common action is to add a structured workout to control a smart trainer or to do outside.",
+          "start_timestamp": 2369.41,
+          "end_timestamp": 2377.01,
+          "mid_timestamp": 2373.21,
+          "screenshot": "screenshots_web_full/sentence_019_mid_2373.2s.jpg",
+          "screenshot_timestamp": 2373.21
+        },
+        {
+          "sentence_id": 20,
+          "sentence": "Once a workout is added, it can be converted to an HR workout, which will be represented by different colors indicating the zones.",
+          "start_timestamp": 2779.13,
+          "end_timestamp": 2787.31,
+          "mid_timestamp": 2783.22,
+          "screenshot": "screenshots_web_full/sentence_020_mid_2783.2s.jpg",
+          "screenshot_timestamp": 2783.22
+        },
+        {
+          "sentence_id": 21,
+          "sentence": "The workout can also be marked as completed, set to reoccur, converted to power, or converted to outdoor.",
+          "start_timestamp": 2889.37,
+          "end_timestamp": 2894.57,
+          "mid_timestamp": 2891.97,
+          "screenshot": "screenshots_web_full/sentence_021_mid_2892.0s.jpg",
+          "screenshot_timestamp": 2891.97
+        },
+        {
+          "sentence_id": 22,
+          "sentence": "The page allows for infinite scrolling in both directions.",
+          "start_timestamp": 2895.07,
+          "end_timestamp": 2898.67,
+          "mid_timestamp": 2896.87,
+          "screenshot": "screenshots_web_full/sentence_022_mid_2896.9s.jpg",
+          "screenshot_timestamp": 2896.87
+        }
+      ]
+    },
+    {
+      "page_name": "My Activities",
+      "description": "This page provides a summary of all completed activities, including total time, total distance, total calories, and the date range of each week.",
+      "start_sentence": 23,
+      "end_sentence": 44,
+      "start_timestamp": 2971.19,
+      "end_timestamp": 3249.53,
+      "relative_url": "/activities",
+      "sentences": [
+        {
+          "sentence_id": 23,
+          "sentence": "Transitioning to the next page, we have My Activities.",
+          "start_timestamp": 2971.19,
+          "end_timestamp": 2972.81,
+          "mid_timestamp": 2972.0,
+          "screenshot": "screenshots_web_full/sentence_023_mid_2972.0s.jpg",
+          "screenshot_timestamp": 2972.0
+        },
+        {
+          "sentence_id": 24,
+          "sentence": "This page provides a summary of all completed activities, including total time, total distance, total calories, and the date range of each week.",
+          "start_timestamp": 2973.31,
+          "end_timestamp": 2982.51,
+          "mid_timestamp": 2977.91,
+          "screenshot": "screenshots_web_full/sentence_024_mid_2977.9s.jpg",
+          "screenshot_timestamp": 2977.91
+        },
+        {
+          "sentence_id": 25,
+          "sentence": "Completed workouts are referred to as activities, while planned workouts are simply called workouts.",
+          "start_timestamp": 2983.01,
+          "end_timestamp": 2988.61,
+          "mid_timestamp": 2985.81,
+          "screenshot": "screenshots_web_full/sentence_025_mid_2985.8s.jpg",
+          "screenshot_timestamp": 2985.81
+        },
+        {
+          "sentence_id": 26,
+          "sentence": "An unplanned activity is represented by squiggly lines, indicating an outdoor ride.",
+          "start_timestamp": 2989.11,
+          "end_timestamp": 2993.91,
+          "mid_timestamp": 2991.51,
+          "screenshot": "screenshots_web_full/sentence_026_mid_2991.5s.jpg",
+          "screenshot_timestamp": 2991.51
+        },
+        {
+          "sentence_id": 27,
+          "sentence": "Details of the activity can be viewed on Strava, meaning the activity was either done on a different system like Zwift or outdoors.",
+          "start_timestamp": 3132.29,
+          "end_timestamp": 3140.23,
+          "mid_timestamp": 3136.26,
+          "screenshot": "screenshots_web_full/sentence_027_mid_3136.3s.jpg",
+          "screenshot_timestamp": 3136.26
+        },
+        {
+          "sentence_id": 28,
+          "sentence": "The details include the duration, average power, average heart rate, and average speed.",
+          "start_timestamp": 3140.73,
+          "end_timestamp": 3145.93,
+          "mid_timestamp": 3143.33,
+          "screenshot": "screenshots_web_full/sentence_028_mid_3143.3s.jpg",
+          "screenshot_timestamp": 3143.33
+        },
+        {
+          "sentence_id": 29,
+          "sentence": "Workouts performed inside our application are represented by a darker blue background and do not have a Strava message.",
+          "start_timestamp": 3146.43,
+          "end_timestamp": 3154.03,
+          "mid_timestamp": 3150.23,
+          "screenshot": "screenshots_web_full/sentence_029_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 30,
+          "sentence": "These workouts are synced to TrainingPeaks and Strava.",
+          "start_timestamp": 3154.53,
+          "end_timestamp": 3157.73,
+          "mid_timestamp": 3156.13,
+          "screenshot": "screenshots_web_full/sentence_030_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 31,
+          "sentence": "The date and time of completion are visible for all workouts.",
+          "start_timestamp": 3158.23,
+          "end_timestamp": 3162.63,
+          "mid_timestamp": 3160.43,
+          "screenshot": "screenshots_web_full/sentence_031_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 32,
+          "sentence": "The time display lacks AM or PM, but you can see the time zone, Warsaw GMT, when you hover over it.",
+          "start_timestamp": 3163.13,
+          "end_timestamp": 3171.53,
+          "mid_timestamp": 3167.33,
+          "screenshot": "screenshots_web_full/sentence_032_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 33,
+          "sentence": "The name is clickable and leads to more details.",
+          "start_timestamp": 3172.03,
+          "end_timestamp": 3175.63,
+          "mid_timestamp": 3173.83,
+          "screenshot": "screenshots_web_full/sentence_033_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 34,
+          "sentence": "On the right, you can see the power zones relative to my Functional Threshold Power (FTP).",
+          "start_timestamp": 3176.13,
+          "end_timestamp": 3182.53,
+          "mid_timestamp": 3179.33,
+          "screenshot": "screenshots_web_full/sentence_034_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 35,
+          "sentence": "In this example, my FTP was 150 watts, which is always represented by the middle line.",
+          "start_timestamp": 3183.03,
+          "end_timestamp": 3189.43,
+          "mid_timestamp": 3186.23,
+          "screenshot": "screenshots_web_full/sentence_035_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 36,
+          "sentence": "At the top of the page, you can see the totals for this week and this year, which in this case is 161 rides.",
+          "start_timestamp": 3189.93,
+          "end_timestamp": 3199.53,
+          "mid_timestamp": 3194.73,
+          "screenshot": "screenshots_web_full/sentence_036_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 37,
+          "sentence": "There is a link to our live view, which I will explain later.",
+          "start_timestamp": 3200.03,
+          "end_timestamp": 3205.23,
+          "mid_timestamp": 3202.63,
+          "screenshot": "screenshots_web_full/sentence_037_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 38,
+          "sentence": "This is the only place where you can refresh Strava.",
+          "start_timestamp": 3205.73,
+          "end_timestamp": 3209.73,
+          "mid_timestamp": 3207.73,
+          "screenshot": "screenshots_web_full/sentence_038_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 39,
+          "sentence": "There is also a search function; for example, if I type \"morning\", it will display all workouts that include \"morning\".",
+          "start_timestamp": 3210.23,
+          "end_timestamp": 3218.23,
+          "mid_timestamp": 3214.23,
+          "screenshot": "screenshots_web_full/sentence_039_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 40,
+          "sentence": "You can either press enter or click on the search icon to execute the search.",
+          "start_timestamp": 3218.73,
+          "end_timestamp": 3224.73,
+          "mid_timestamp": 3221.73,
+          "screenshot": "screenshots_web_full/sentence_040_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 41,
+          "sentence": "The calendar page does not have this top section, but all other pages do.",
+          "start_timestamp": 3225.23,
+          "end_timestamp": 3230.83,
+          "mid_timestamp": 3228.03,
+          "screenshot": "screenshots_web_full/sentence_041_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 42,
+          "sentence": "This top section provides additional functionality and a menu that appears when I click on \"AL\".",
+          "start_timestamp": 3231.33,
+          "end_timestamp": 3237.73,
+          "mid_timestamp": 3234.53,
+          "screenshot": "screenshots_web_full/sentence_042_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 43,
+          "sentence": "There is another menu here that leads to more pages.",
+          "start_timestamp": 3238.23,
+          "end_timestamp": 3242.23,
+          "mid_timestamp": 3240.23,
+          "screenshot": "screenshots_web_full/sentence_043_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 44,
+          "sentence": "On the left, you can see the main menu, and on the right, there are additional connections.",
+          "start_timestamp": 3242.73,
+          "end_timestamp": 3249.53,
+          "mid_timestamp": 3246.13,
+          "screenshot": "screenshots_web_full/sentence_044_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Today",
+      "description": "The 'Today' tab suggests workouts that match your style and intensity based on your previous workouts.",
+      "start_sentence": 45,
+      "end_sentence": 53,
+      "start_timestamp": 3250.03,
+      "end_timestamp": 3305.63,
+      "relative_url": "/today",
+      "sentences": [
+        {
+          "sentence_id": 45,
+          "sentence": "Now, let's move on to the \"Today\" tab.",
+          "start_timestamp": 3250.03,
+          "end_timestamp": 3253.23,
+          "mid_timestamp": 3251.63,
+          "screenshot": "screenshots_web_full/sentence_045_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 46,
+          "sentence": "The \"Today\" tab suggests workouts that match your style and intensity based on your previous workouts.",
+          "start_timestamp": 3253.73,
+          "end_timestamp": 3260.13,
+          "mid_timestamp": 3256.93,
+          "screenshot": "screenshots_web_full/sentence_046_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 47,
+          "sentence": "The recommended workout is usually similar in intensity to what you did last week.",
+          "start_timestamp": 3260.63,
+          "end_timestamp": 3266.23,
+          "mid_timestamp": 3263.43,
+          "screenshot": "screenshots_web_full/sentence_047_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 48,
+          "sentence": "The percentage shown, such as -6.8%, indicates that this workout is easier than what I did on average last week.",
+          "start_timestamp": 3266.73,
+          "end_timestamp": 3274.73,
+          "mid_timestamp": 3270.73,
+          "screenshot": "screenshots_web_full/sentence_048_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 49,
+          "sentence": "Another workout, marked -1.4%, is similar in intensity to my hardest workouts last week.",
+          "start_timestamp": 3275.23,
+          "end_timestamp": 3280.83,
+          "mid_timestamp": 3278.03,
+          "screenshot": "screenshots_web_full/sentence_049_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 50,
+          "sentence": "There is also an endurance recovery option that is lighter in intensity.",
+          "start_timestamp": 3281.33,
+          "end_timestamp": 3286.13,
+          "mid_timestamp": 3283.73,
+          "screenshot": "screenshots_web_full/sentence_050_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 51,
+          "sentence": "These suggested workouts remain the same every time I visit this page unless I hit refresh or change the desired duration.",
+          "start_timestamp": 3286.63,
+          "end_timestamp": 3295.03,
+          "mid_timestamp": 3290.83,
+          "screenshot": "screenshots_web_full/sentence_051_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 52,
+          "sentence": "There is also a link where you can learn more about these workouts.",
+          "start_timestamp": 3295.53,
+          "end_timestamp": 3300.73,
+          "mid_timestamp": 3298.13,
+          "screenshot": "screenshots_web_full/sentence_052_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 53,
+          "sentence": "If you keep refreshing, the suggested workouts will vary in difficulty.",
+          "start_timestamp": 3301.23,
+          "end_timestamp": 3305.63,
+          "mid_timestamp": 3303.43,
+          "screenshot": "screenshots_web_full/sentence_053_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Search Workouts",
+      "description": "Here, you can search for workouts by title or specific features such as duration or intensity.",
+      "start_sentence": 54,
+      "end_sentence": 89,
+      "start_timestamp": 3306.13,
+      "end_timestamp": 3564.43,
+      "relative_url": "/workouts/search",
+      "sentences": [
+        {
+          "sentence_id": 54,
+          "sentence": "Now, let's move on to the \"Search Workouts\" tab.",
+          "start_timestamp": 3306.13,
+          "end_timestamp": 3309.73,
+          "mid_timestamp": 3307.93,
+          "screenshot": "screenshots_web_full/sentence_054_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 55,
+          "sentence": "Here, you can search for workouts by title or specific features such as duration or intensity.",
+          "start_timestamp": 3310.23,
+          "end_timestamp": 3316.63,
+          "mid_timestamp": 3313.43,
+          "screenshot": "screenshots_web_full/sentence_055_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 56,
+          "sentence": "The popularity of a workout is indicated by a blue background and the number of people who have downloaded or used it.",
+          "start_timestamp": 3317.13,
+          "end_timestamp": 3325.93,
+          "mid_timestamp": 3321.53,
+          "screenshot": "screenshots_web_full/sentence_056_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 57,
+          "sentence": "The workout's name is clickable and leads to more details.",
+          "start_timestamp": 3326.43,
+          "end_timestamp": 3330.43,
+          "mid_timestamp": 3328.43,
+          "screenshot": "screenshots_web_full/sentence_057_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 58,
+          "sentence": "Workouts with a red background have been added to my favorites.",
+          "start_timestamp": 3330.93,
+          "end_timestamp": 3335.33,
+          "mid_timestamp": 3333.13,
+          "screenshot": "screenshots_web_full/sentence_058_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 59,
+          "sentence": "You can send the workout to Garmin, your calendar, Intervals ICU, Training Peaks, or Wahoo.",
+          "start_timestamp": 3335.83,
+          "end_timestamp": 3341.83,
+          "mid_timestamp": 3338.83,
+          "screenshot": "screenshots_web_full/sentence_059_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 60,
+          "sentence": "You can also choose to send the workout as a power workout or a heart rate workout, and specify whether it's for indoor or outdoor use.",
+          "start_timestamp": 3342.33,
+          "end_timestamp": 3352.73,
+          "mid_timestamp": 3347.53,
+          "screenshot": "screenshots_web_full/sentence_060_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 61,
+          "sentence": "There is a \"Ride Now\" button that provides a link to the workout, which you can copy and paste into your calendar or send to your mobile device.",
+          "start_timestamp": 3353.23,
+          "end_timestamp": 3364.43,
+          "mid_timestamp": 3358.83,
+          "screenshot": "screenshots_web_full/sentence_061_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 62,
+          "sentence": "You can also share the workout by copying a link or embedding some code onto your website.",
+          "start_timestamp": 3364.93,
+          "end_timestamp": 3371.73,
+          "mid_timestamp": 3368.33,
+          "screenshot": "screenshots_web_full/sentence_062_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 63,
+          "sentence": "Some features, such as \"Make Workout Private\", are only available to admins.",
+          "start_timestamp": 3372.23,
+          "end_timestamp": 3377.03,
+          "mid_timestamp": 3374.63,
+          "screenshot": "screenshots_web_full/sentence_063_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 64,
+          "sentence": "You can download the workout file, copy the workout, or copy the link.",
+          "start_timestamp": 3377.53,
+          "end_timestamp": 3382.73,
+          "mid_timestamp": 3380.13,
+          "screenshot": "screenshots_web_full/sentence_064_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 65,
+          "sentence": "The initial part of the workout description is visible, and you can expand it to see the rest of the text.",
+          "start_timestamp": 3383.23,
+          "end_timestamp": 3391.63,
+          "mid_timestamp": 3387.43,
+          "screenshot": "screenshots_web_full/sentence_065_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 66,
+          "sentence": "You can see who created the workout and when it was created.",
+          "start_timestamp": 3392.13,
+          "end_timestamp": 3396.93,
+          "mid_timestamp": 3394.53,
+          "screenshot": "screenshots_web_full/sentence_066_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 67,
+          "sentence": "If you click on the user's information, it will lead to more details about them.",
+          "start_timestamp": 3397.43,
+          "end_timestamp": 3403.43,
+          "mid_timestamp": 3400.43,
+          "screenshot": "screenshots_web_full/sentence_067_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 68,
+          "sentence": "The system allows the user to select an author and filter all workouts by that author.",
+          "start_timestamp": 3403.93,
+          "end_timestamp": 3410.33,
+          "mid_timestamp": 3407.13,
+          "screenshot": "screenshots_web_full/sentence_068_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 69,
+          "sentence": "The search options can be contracted to make the interface look cleaner.",
+          "start_timestamp": 3410.83,
+          "end_timestamp": 3415.63,
+          "mid_timestamp": 3413.23,
+          "screenshot": "screenshots_web_full/sentence_069_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 70,
+          "sentence": "These search options are not available for free users as they are part of the paid features.",
+          "start_timestamp": 3416.13,
+          "end_timestamp": 3422.93,
+          "mid_timestamp": 3419.53,
+          "screenshot": "screenshots_web_full/sentence_070_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 71,
+          "sentence": "Some features, such as the \"send to\" option, are also part of the paid package.",
+          "start_timestamp": 3423.43,
+          "end_timestamp": 3429.43,
+          "mid_timestamp": 3426.43,
+          "screenshot": "screenshots_web_full/sentence_071_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 72,
+          "sentence": "The user experience varies slightly between free and paid users, but for the purpose of this discussion, we will focus on the paid user experience.",
+          "start_timestamp": 3429.93,
+          "end_timestamp": 3439.93,
+          "mid_timestamp": 3434.93,
+          "screenshot": "screenshots_web_full/sentence_072_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 73,
+          "sentence": "The next menu item to discuss is \"workouts\".",
+          "start_timestamp": 3440.43,
+          "end_timestamp": 3443.63,
+          "mid_timestamp": 3442.03,
+          "screenshot": "screenshots_web_full/sentence_073_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 74,
+          "sentence": "The \"my workouts\" section is similar to the search function, but it includes workouts that have been added to favorites.",
+          "start_timestamp": 3444.13,
+          "end_timestamp": 3452.13,
+          "mid_timestamp": 3448.13,
+          "screenshot": "screenshots_web_full/sentence_074_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 75,
+          "sentence": "These favorite workouts can be added to different lists, which can be filtered.",
+          "start_timestamp": 3452.63,
+          "end_timestamp": 3457.83,
+          "mid_timestamp": 3455.23,
+          "screenshot": "screenshots_web_full/sentence_075_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 76,
+          "sentence": "The \"HR workouts\" list, for example, contains workouts that were added as a test.",
+          "start_timestamp": 3458.33,
+          "end_timestamp": 3463.93,
+          "mid_timestamp": 3461.13,
+          "screenshot": "screenshots_web_full/sentence_076_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 77,
+          "sentence": "Each list has a unique URL that can be copied and shared.",
+          "start_timestamp": 3464.43,
+          "end_timestamp": 3469.23,
+          "mid_timestamp": 3466.83,
+          "screenshot": "screenshots_web_full/sentence_077_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 78,
+          "sentence": "Although these lists are private, they can be shared with other paid users who can then view, follow, or execute the workouts.",
+          "start_timestamp": 3469.73,
+          "end_timestamp": 3478.53,
+          "mid_timestamp": 3474.13,
+          "screenshot": "screenshots_web_full/sentence_078_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 79,
+          "sentence": "The system also allows users to search through all their lists.",
+          "start_timestamp": 3479.03,
+          "end_timestamp": 3483.43,
+          "mid_timestamp": 3481.23,
+          "screenshot": "screenshots_web_full/sentence_079_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 80,
+          "sentence": "The \"list manager\" feature allows users to copy the list URL, name their lists, decide if they want them to appear in the app, and even provide a short name for easy access.",
+          "start_timestamp": 3483.93,
+          "end_timestamp": 3497.13,
+          "mid_timestamp": 3490.53,
+          "screenshot": "screenshots_web_full/sentence_080_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 81,
+          "sentence": "The list can be saved, deleted, and the sort order can be changed.",
+          "start_timestamp": 3497.63,
+          "end_timestamp": 3502.83,
+          "mid_timestamp": 3500.23,
+          "screenshot": "screenshots_web_full/sentence_081_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 82,
+          "sentence": "The sort order affects how the list appears in the app and on the website, as well as the order of the workouts within the list.",
+          "start_timestamp": 3503.33,
+          "end_timestamp": 3513.73,
+          "mid_timestamp": 3508.53,
+          "screenshot": "screenshots_web_full/sentence_082_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 83,
+          "sentence": "New lists can be created in the list manager or by using the \"add to new list\" option in the drop-down menu.",
+          "start_timestamp": 3514.23,
+          "end_timestamp": 3523.03,
+          "mid_timestamp": 3518.63,
+          "screenshot": "screenshots_web_full/sentence_083_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 84,
+          "sentence": "The system also provides a link to create a workout.",
+          "start_timestamp": 3523.53,
+          "end_timestamp": 3527.53,
+          "mid_timestamp": 3525.53,
+          "screenshot": "screenshots_web_full/sentence_084_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 85,
+          "sentence": "This \"create workout\" option is not in the left menu because most users typically use the existing workouts or plans.",
+          "start_timestamp": 3528.03,
+          "end_timestamp": 3536.03,
+          "mid_timestamp": 3532.03,
+          "screenshot": "screenshots_web_full/sentence_085_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 86,
+          "sentence": "However, advanced users or those who want to create their own workout can use this link.",
+          "start_timestamp": 3536.53,
+          "end_timestamp": 3542.93,
+          "mid_timestamp": 3539.73,
+          "screenshot": "screenshots_web_full/sentence_086_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 87,
+          "sentence": "There is also a link to the \"create workout\" page on the homepage.",
+          "start_timestamp": 3543.43,
+          "end_timestamp": 3548.63,
+          "mid_timestamp": 3546.03,
+          "screenshot": "screenshots_web_full/sentence_087_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 88,
+          "sentence": "The homepage is a static page that provides access to frequently asked questions, a search function, and a link to download the app.",
+          "start_timestamp": 3549.13,
+          "end_timestamp": 3558.33,
+          "mid_timestamp": 3553.73,
+          "screenshot": "screenshots_web_full/sentence_088_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 89,
+          "sentence": "It also includes features to set an active plan and adjust speed and distance.",
+          "start_timestamp": 3558.83,
+          "end_timestamp": 3564.43,
+          "mid_timestamp": 3561.63,
+          "screenshot": "screenshots_web_full/sentence_089_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Coach Jack Plan Builder",
+      "description": "The next menu item is the 'Coach Jack Plan Builder', which has several subpages.",
+      "start_sentence": 90,
+      "end_sentence": 93,
+      "start_timestamp": 3564.93,
+      "end_timestamp": 3594.83,
+      "relative_url": "/coach-jack",
+      "sentences": [
+        {
+          "sentence_id": 90,
+          "sentence": "The next menu item is the \"Coach Jack Plan Builder\", which has several subpages.",
+          "start_timestamp": 3564.93,
+          "end_timestamp": 3570.53,
+          "mid_timestamp": 3567.73,
+          "screenshot": "screenshots_web_full/sentence_090_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 91,
+          "sentence": "The first page provides an overview of the plan builder's functions.",
+          "start_timestamp": 3571.03,
+          "end_timestamp": 3575.43,
+          "mid_timestamp": 3573.23,
+          "screenshot": "screenshots_web_full/sentence_091_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 92,
+          "sentence": "The next menu item is the Coach Jack Plan Builder, which is a static page that describes the feature.",
+          "start_timestamp": 3575.93,
+          "end_timestamp": 3583.53,
+          "mid_timestamp": 3579.73,
+          "screenshot": "screenshots_web_full/sentence_092_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 93,
+          "sentence": "The main feature of this page is the \"Create a New Plan\" button, but it also has a link to \"My Plans\", which is another menu item.",
+          "start_timestamp": 3584.03,
+          "end_timestamp": 3594.83,
+          "mid_timestamp": 3589.43,
+          "screenshot": "screenshots_web_full/sentence_093_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Training Plans",
+      "description": "The training plans available here are the same ones that you can generate in the Coach Jack Plan Builder, but these are pre-made and simple to use.",
+      "start_sentence": 94,
+      "end_sentence": 127,
+      "start_timestamp": 3595.33,
+      "end_timestamp": 3839.43,
+      "relative_url": "/plans",
+      "sentences": [
+        {
+          "sentence_id": 94,
+          "sentence": "Moving on to the next page, we transition to \"Training Plans\".",
+          "start_timestamp": 3595.33,
+          "end_timestamp": 3599.73,
+          "mid_timestamp": 3597.53,
+          "screenshot": "screenshots_web_full/sentence_094_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 95,
+          "sentence": "The training plans available here are the same ones that you can generate in the Coach Jack Plan Builder, but these are pre-made and simple to use.",
+          "start_timestamp": 3600.23,
+          "end_timestamp": 3611.03,
+          "mid_timestamp": 3605.63,
+          "screenshot": "screenshots_web_full/sentence_095_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 96,
+          "sentence": "Some users may find the Plan Builder overwhelming and prefer to choose a simple, pre-made plan.",
+          "start_timestamp": 3611.53,
+          "end_timestamp": 3617.93,
+          "mid_timestamp": 3614.73,
+          "screenshot": "screenshots_web_full/sentence_096_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 97,
+          "sentence": "There are numerous different plans available, and there's also a link to the custom Plan Builder for those who wish to create their own plan.",
+          "start_timestamp": 3618.43,
+          "end_timestamp": 3628.43,
+          "mid_timestamp": 3623.43,
+          "screenshot": "screenshots_web_full/sentence_097_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 98,
+          "sentence": "In addition to these, we also offer premium plans and community plans.",
+          "start_timestamp": 3628.93,
+          "end_timestamp": 3633.73,
+          "mid_timestamp": 3631.33,
+          "screenshot": "screenshots_web_full/sentence_098_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 99,
+          "sentence": "The community plans are a sub-tab of the training plans, not to be confused with \"My Plans\", which is a different feature.",
+          "start_timestamp": 3634.23,
+          "end_timestamp": 3643.03,
+          "mid_timestamp": 3638.63,
+          "screenshot": "screenshots_web_full/sentence_099_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 100,
+          "sentence": "On this page, you can create the perfect plan, learn how it works, and search for workouts.",
+          "start_timestamp": 3643.53,
+          "end_timestamp": 3650.33,
+          "mid_timestamp": 3646.93,
+          "screenshot": "screenshots_web_full/sentence_100_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 101,
+          "sentence": "You can also search for plans and view their popularity.",
+          "start_timestamp": 3650.83,
+          "end_timestamp": 3654.83,
+          "mid_timestamp": 3652.83,
+          "screenshot": "screenshots_web_full/sentence_101_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 102,
+          "sentence": "The public plans that are labeled \"Alex\" were likely created by me.",
+          "start_timestamp": 3655.33,
+          "end_timestamp": 3660.13,
+          "mid_timestamp": 3657.73,
+          "screenshot": "screenshots_web_full/sentence_102_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 103,
+          "sentence": "For example, the most popular plan is the VO2 Max Booster, and you can view the details of this plan.",
+          "start_timestamp": 3660.63,
+          "end_timestamp": 3668.63,
+          "mid_timestamp": 3664.63,
+          "screenshot": "screenshots_web_full/sentence_103_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 104,
+          "sentence": "Clicking on a plan will take you to the plan details, where you can see the workouts and the days they are scheduled.",
+          "start_timestamp": 3669.13,
+          "end_timestamp": 3678.33,
+          "mid_timestamp": 3673.73,
+          "screenshot": "screenshots_web_full/sentence_104_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 105,
+          "sentence": "There is a \"Continue Reading\" or \"Hide\" option to view more content, and you can copy the plan to \"My Plans\".",
+          "start_timestamp": 3678.83,
+          "end_timestamp": 3687.23,
+          "mid_timestamp": 3683.03,
+          "screenshot": "screenshots_web_full/sentence_105_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 106,
+          "sentence": "Once a plan is copied to \"My Plans\", it will appear on the \"My Plans\" page.",
+          "start_timestamp": 3687.73,
+          "end_timestamp": 3694.13,
+          "mid_timestamp": 3690.93,
+          "screenshot": "screenshots_web_full/sentence_106_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 107,
+          "sentence": "From the \"My Plans\" page, you can send the plan to your calendar, download it, or do whatever you want with it.",
+          "start_timestamp": 3694.63,
+          "end_timestamp": 3703.43,
+          "mid_timestamp": 3699.03,
+          "screenshot": "screenshots_web_full/sentence_107_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 108,
+          "sentence": "You can view the intensity, stress, or duration of the plan, and see who created it.",
+          "start_timestamp": 3703.93,
+          "end_timestamp": 3710.33,
+          "mid_timestamp": 3707.13,
+          "screenshot": "screenshots_web_full/sentence_108_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 109,
+          "sentence": "The ratio of different types of workouts is displayed, as well as the duration of the plan in days and weeks.",
+          "start_timestamp": 3710.83,
+          "end_timestamp": 3719.23,
+          "mid_timestamp": 3715.03,
+          "screenshot": "screenshots_web_full/sentence_109_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 110,
+          "sentence": "When you copy a plan to \"My Plans\", a pop-up appears that allows you to leave the plan as designed.",
+          "start_timestamp": 3719.73,
+          "end_timestamp": 3727.73,
+          "mid_timestamp": 3723.73,
+          "screenshot": "screenshots_web_full/sentence_110_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 111,
+          "sentence": "However, you can also modify the plan, for example, changing a seven-day-a-week plan to a three-day-a-week plan, which would result in a longer overall plan.",
+          "start_timestamp": 3728.23,
+          "end_timestamp": 3738.23,
+          "mid_timestamp": 3733.23,
+          "screenshot": "screenshots_web_full/sentence_111_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 112,
+          "sentence": "You can rename the plan, change the period type, and edit the description when you copy it to \"My Plans\".",
+          "start_timestamp": 3738.73,
+          "end_timestamp": 3746.73,
+          "mid_timestamp": 3742.73,
+          "screenshot": "screenshots_web_full/sentence_112_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 113,
+          "sentence": "You can click on any one of these workouts to see the workout description zones.",
+          "start_timestamp": 3747.23,
+          "end_timestamp": 3753.23,
+          "mid_timestamp": 3750.23,
+          "screenshot": "screenshots_web_full/sentence_113_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 114,
+          "sentence": "I'll describe some more of these features later.",
+          "start_timestamp": 3753.73,
+          "end_timestamp": 3756.93,
+          "mid_timestamp": 3755.33,
+          "screenshot": "screenshots_web_full/sentence_114_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 115,
+          "sentence": "You have the option to send or copy the workout, which are the same features I saw on the workout page.",
+          "start_timestamp": 3757.43,
+          "end_timestamp": 3765.83,
+          "mid_timestamp": 3761.63,
+          "screenshot": "screenshots_web_full/sentence_115_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 116,
+          "sentence": "Now, let's discuss the details of the training plans and community plans.",
+          "start_timestamp": 3766.33,
+          "end_timestamp": 3771.13,
+          "mid_timestamp": 3768.73,
+          "screenshot": "screenshots_web_full/sentence_116_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 117,
+          "sentence": "I'm going to backtrack slightly and go back to premium plans.",
+          "start_timestamp": 3771.63,
+          "end_timestamp": 3776.03,
+          "mid_timestamp": 3773.83,
+          "screenshot": "screenshots_web_full/sentence_117_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 118,
+          "sentence": "We'll do a green screen here.",
+          "start_timestamp": 3776.53,
+          "end_timestamp": 3779.53,
+          "mid_timestamp": 3778.03,
+          "screenshot": "screenshots_web_full/sentence_118_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 119,
+          "sentence": "This premium plan should probably be included with the previous premium plans descriptions, but it could be broken.",
+          "start_timestamp": 3780.03,
+          "end_timestamp": 3787.23,
+          "mid_timestamp": 3783.63,
+          "screenshot": "screenshots_web_full/sentence_119_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 120,
+          "sentence": "I'm on this page and now I click view the plan.",
+          "start_timestamp": 3787.73,
+          "end_timestamp": 3792.13,
+          "mid_timestamp": 3789.93,
+          "screenshot": "screenshots_web_full/sentence_120_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 121,
+          "sentence": "It shows me a similar view to the community plans details.",
+          "start_timestamp": 3792.63,
+          "end_timestamp": 3797.03,
+          "mid_timestamp": 3794.83,
+          "screenshot": "screenshots_web_full/sentence_121_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 122,
+          "sentence": "It shows you how much work it is, how intense it is, and all the different workouts.",
+          "start_timestamp": 3797.53,
+          "end_timestamp": 3804.33,
+          "mid_timestamp": 3800.93,
+          "screenshot": "screenshots_web_full/sentence_122_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 123,
+          "sentence": "You can even add days to it to make it your own.",
+          "start_timestamp": 3804.83,
+          "end_timestamp": 3809.63,
+          "mid_timestamp": 3807.23,
+          "screenshot": "screenshots_web_full/sentence_123_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 124,
+          "sentence": "You have the same features as my plans here that you can drag workouts onto it, add workouts to the plan, and then send it to your calendar.",
+          "start_timestamp": 3810.13,
+          "end_timestamp": 3821.33,
+          "mid_timestamp": 3815.73,
+          "screenshot": "screenshots_web_full/sentence_124_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 125,
+          "sentence": "When you click send calendar, it pops up and it shows you that you can change the days.",
+          "start_timestamp": 3821.83,
+          "end_timestamp": 3829.03,
+          "mid_timestamp": 3825.43,
+          "screenshot": "screenshots_web_full/sentence_125_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 126,
+          "sentence": "You can do all this stuff, same features that we had on the other community plans.",
+          "start_timestamp": 3829.53,
+          "end_timestamp": 3835.93,
+          "mid_timestamp": 3832.73,
+          "screenshot": "screenshots_web_full/sentence_126_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 127,
+          "sentence": "Now, let's go to my plans.",
+          "start_timestamp": 3836.43,
+          "end_timestamp": 3839.43,
+          "mid_timestamp": 3837.93,
+          "screenshot": "screenshots_web_full/sentence_127_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "My Plans",
+      "description": "My plans are either I could create my own plan from scratch, which I'll click on that just to show you.",
+      "start_sentence": 128,
+      "end_sentence": 165,
+      "start_timestamp": 3839.93,
+      "end_timestamp": 4116.63,
+      "relative_url": "/plans/my",
+      "sentences": [
+        {
+          "sentence_id": 128,
+          "sentence": "My plans are either I could create my own plan from scratch, which I'll click on that just to show you.",
+          "start_timestamp": 3839.93,
+          "end_timestamp": 3848.33,
+          "mid_timestamp": 3844.13,
+          "screenshot": "screenshots_web_full/sentence_128_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 129,
+          "sentence": "It's eight weeks long, click done, now it created a blank plan.",
+          "start_timestamp": 3848.83,
+          "end_timestamp": 3853.63,
+          "mid_timestamp": 3851.23,
+          "screenshot": "screenshots_web_full/sentence_129_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 130,
+          "sentence": "It created a unique URL for this plan and I can once again drag and drop workouts onto the calendar.",
+          "start_timestamp": 3854.13,
+          "end_timestamp": 3862.13,
+          "mid_timestamp": 3858.13,
+          "screenshot": "screenshots_web_full/sentence_130_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 131,
+          "sentence": "These workouts are from my workout library list.",
+          "start_timestamp": 3862.63,
+          "end_timestamp": 3865.83,
+          "mid_timestamp": 3864.23,
+          "screenshot": "screenshots_web_full/sentence_131_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 132,
+          "sentence": "Any lists that you create, you generate all these lists and then you can create plans from those lists.",
+          "start_timestamp": 3866.33,
+          "end_timestamp": 3873.93,
+          "mid_timestamp": 3870.13,
+          "screenshot": "screenshots_web_full/sentence_132_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 133,
+          "sentence": "If you drag it over this list, it then has a trash can and you can delete it or remove it from the calendar.",
+          "start_timestamp": 3874.43,
+          "end_timestamp": 3884.03,
+          "mid_timestamp": 3879.23,
+          "screenshot": "screenshots_web_full/sentence_133_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 134,
+          "sentence": "When you have this plan, you can edit the plan details, clone the plan, or delete the plan.",
+          "start_timestamp": 3884.53,
+          "end_timestamp": 3891.73,
+          "mid_timestamp": 3888.13,
+          "screenshot": "screenshots_web_full/sentence_134_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 135,
+          "sentence": "I think you have to put one workout on every day.",
+          "start_timestamp": 3892.23,
+          "end_timestamp": 3896.63,
+          "mid_timestamp": 3894.43,
+          "screenshot": "screenshots_web_full/sentence_135_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 136,
+          "sentence": "I think you have to have at least one workout a week.",
+          "start_timestamp": 3897.13,
+          "end_timestamp": 3901.93,
+          "mid_timestamp": 3899.53,
+          "screenshot": "screenshots_web_full/sentence_136_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 137,
+          "sentence": "Once I put workouts on the plan, I save it, then I can send or download.",
+          "start_timestamp": 3902.43,
+          "end_timestamp": 3908.83,
+          "mid_timestamp": 3905.63,
+          "screenshot": "screenshots_web_full/sentence_137_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 138,
+          "sentence": "You can send to TrainingPeaks, to Garmin, to intervals, to Google Calendar, to my calendar.",
+          "start_timestamp": 3909.33,
+          "end_timestamp": 3915.33,
+          "mid_timestamp": 3912.33,
+          "screenshot": "screenshots_web_full/sentence_138_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 139,
+          "sentence": "You can decide which weeks to send and when it starts.",
+          "start_timestamp": 3915.83,
+          "end_timestamp": 3920.23,
+          "mid_timestamp": 3918.03,
+          "screenshot": "screenshots_web_full/sentence_139_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 140,
+          "sentence": "All of our weeks start on a Monday, so we always start all the plans on a Monday.",
+          "start_timestamp": 3920.73,
+          "end_timestamp": 3927.93,
+          "mid_timestamp": 3924.33,
+          "screenshot": "screenshots_web_full/sentence_140_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 141,
+          "sentence": "With regards to TrainingPeaks, it says this is for premium users of TrainingPeaks.",
+          "start_timestamp": 3928.43,
+          "end_timestamp": 3933.63,
+          "mid_timestamp": 3931.03,
+          "screenshot": "screenshots_web_full/sentence_141_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 142,
+          "sentence": "If you send a whole calendar to TrainingPeaks, for example, it will put them all on today if you are a free user of TrainingPeaks.",
+          "start_timestamp": 3934.13,
+          "end_timestamp": 3944.13,
+          "mid_timestamp": 3939.13,
+          "screenshot": "screenshots_web_full/sentence_142_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 143,
+          "sentence": "If you're a TrainingPeaks premium user, then you can send a whole plan there and it will show up on your calendar normally.",
+          "start_timestamp": 3944.63,
+          "end_timestamp": 3953.83,
+          "mid_timestamp": 3949.23,
+          "screenshot": "screenshots_web_full/sentence_143_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 144,
+          "sentence": "You can also send it to intervals, Google Calendar, or my calendar.",
+          "start_timestamp": 3954.33,
+          "end_timestamp": 3959.13,
+          "mid_timestamp": 3956.73,
+          "screenshot": "screenshots_web_full/sentence_144_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 145,
+          "sentence": "You can download the format MRC, ZWR, or ERG, but it will also create it all as a zip.",
+          "start_timestamp": 3959.63,
+          "end_timestamp": 3967.23,
+          "mid_timestamp": 3963.43,
+          "screenshot": "screenshots_web_full/sentence_145_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 146,
+          "sentence": "It will add a calendar ICS file and a CSV overview of what all the workouts are in your plan.",
+          "start_timestamp": 3967.73,
+          "end_timestamp": 3975.73,
+          "mid_timestamp": 3971.73,
+          "screenshot": "screenshots_web_full/sentence_146_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 147,
+          "sentence": "For your downloaded plan, you can use it how you want.",
+          "start_timestamp": 3976.23,
+          "end_timestamp": 3980.63,
+          "mid_timestamp": 3978.43,
+          "screenshot": "screenshots_web_full/sentence_147_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 148,
+          "sentence": "You've also got the option to share here, copy a shareable link, and you can make it a public plan.",
+          "start_timestamp": 3981.13,
+          "end_timestamp": 3989.13,
+          "mid_timestamp": 3985.13,
+          "screenshot": "screenshots_web_full/sentence_148_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 149,
+          "sentence": "If you are creating a plan, you can share it with other people and you can just click on public plan and then it's available to everybody else.",
+          "start_timestamp": 3989.63,
+          "end_timestamp": 4000.83,
+          "mid_timestamp": 3995.23,
+          "screenshot": "screenshots_web_full/sentence_149_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 150,
+          "sentence": "That's an overview of creating a plan.",
+          "start_timestamp": 4001.33,
+          "end_timestamp": 4004.33,
+          "mid_timestamp": 4002.83,
+          "screenshot": "screenshots_web_full/sentence_150_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 151,
+          "sentence": "Now I'm back to my plans and I'm just showing you we've got this feature activate in mobile app.",
+          "start_timestamp": 4004.83,
+          "end_timestamp": 4012.43,
+          "mid_timestamp": 4008.63,
+          "screenshot": "screenshots_web_full/sentence_151_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 152,
+          "sentence": "Right now our mobile app has one active plan at a time.",
+          "start_timestamp": 4012.93,
+          "end_timestamp": 4017.73,
+          "mid_timestamp": 4015.33,
+          "screenshot": "screenshots_web_full/sentence_152_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 153,
+          "sentence": "You can only have one plan and that plan can be your calendar or your trainer day calendar.",
+          "start_timestamp": 4018.23,
+          "end_timestamp": 4025.43,
+          "mid_timestamp": 4021.83,
+          "screenshot": "screenshots_web_full/sentence_153_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 154,
+          "sentence": "That plan can come from TrainingPeaks.",
+          "start_timestamp": 4025.93,
+          "end_timestamp": 4028.93,
+          "mid_timestamp": 4027.43,
+          "screenshot": "screenshots_web_full/sentence_154_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 155,
+          "sentence": "It can come from intervals ICU WOD.",
+          "start_timestamp": 4029.43,
+          "end_timestamp": 4032.43,
+          "mid_timestamp": 4030.93,
+          "screenshot": "screenshots_web_full/sentence_155_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 156,
+          "sentence": "You can use different calendar sources.",
+          "start_timestamp": 4032.93,
+          "end_timestamp": 4035.93,
+          "mid_timestamp": 4034.43,
+          "screenshot": "screenshots_web_full/sentence_156_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 157,
+          "sentence": "If you say activate in mobile app, you can see here that it will deactivate your calendar or you can use the plan directly.",
+          "start_timestamp": 4036.43,
+          "end_timestamp": 4046.03,
+          "mid_timestamp": 4041.23,
+          "screenshot": "screenshots_web_full/sentence_157_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 158,
+          "sentence": "If you use the plan directly in our training app, it will automatically move from one workout to the next as you complete them and say that you've completed.",
+          "start_timestamp": 4046.53,
+          "end_timestamp": 4058.13,
+          "mid_timestamp": 4052.33,
+          "screenshot": "screenshots_web_full/sentence_158_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 159,
+          "sentence": "This makes it highly flexible that you can follow a plan without having to do it on certain days.",
+          "start_timestamp": 4058.63,
+          "end_timestamp": 4066.23,
+          "mid_timestamp": 4062.43,
+          "screenshot": "screenshots_web_full/sentence_159_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 160,
+          "sentence": "If you've got a four day a week plan and you only get to do two of those workouts, you just do two of those workouts and move to the next.",
+          "start_timestamp": 4066.73,
+          "end_timestamp": 4079.13,
+          "mid_timestamp": 4072.93,
+          "screenshot": "screenshots_web_full/sentence_160_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 161,
+          "sentence": "This one says by coach Jack and it's in bold and it's got the little icon that this actually changes.",
+          "start_timestamp": 4079.63,
+          "end_timestamp": 4087.63,
+          "mid_timestamp": 4083.63,
+          "screenshot": "screenshots_web_full/sentence_161_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 162,
+          "sentence": "On a normal my plans or something I created or copied from somewhere else, view and edit are a single one.",
+          "start_timestamp": 4088.13,
+          "end_timestamp": 4096.53,
+          "mid_timestamp": 4092.33,
+          "screenshot": "screenshots_web_full/sentence_162_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 163,
+          "sentence": "If it's a coach Jack plan, I can view or edit and it's separate view.",
+          "start_timestamp": 4097.03,
+          "end_timestamp": 4103.03,
+          "mid_timestamp": 4100.03,
+          "screenshot": "screenshots_web_full/sentence_163_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 164,
+          "sentence": "View looks like what I showed you from the other my plans page but edit actually takes you to the coach Jack plan builder.",
+          "start_timestamp": 4103.53,
+          "end_timestamp": 4113.13,
+          "mid_timestamp": 4108.33,
+          "screenshot": "screenshots_web_full/sentence_164_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 165,
+          "sentence": "You can delete or send or download.",
+          "start_timestamp": 4113.63,
+          "end_timestamp": 4116.63,
+          "mid_timestamp": 4115.13,
+          "screenshot": "screenshots_web_full/sentence_165_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Coach Jack Plan Builder",
+      "description": "Now, let's move to the coach Jack plan builder and we'll go to create a new plan.",
+      "start_sentence": 166,
+      "end_sentence": 199,
+      "start_timestamp": 4117.13,
+      "end_timestamp": 4340.83,
+      "relative_url": "/coach-jack",
+      "sentences": [
+        {
+          "sentence_id": 166,
+          "sentence": "Now, let's move to the coach Jack plan builder and we'll go to create a new plan.",
+          "start_timestamp": 4117.13,
+          "end_timestamp": 4123.93,
+          "mid_timestamp": 4120.53,
+          "screenshot": "screenshots_web_full/sentence_166_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 167,
+          "sentence": "As a first time user, it shows up like this.",
+          "start_timestamp": 4124.43,
+          "end_timestamp": 4128.43,
+          "mid_timestamp": 4126.43,
+          "screenshot": "screenshots_web_full/sentence_167_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 168,
+          "sentence": "You see this analyze Strava or skip Strava.",
+          "start_timestamp": 4128.93,
+          "end_timestamp": 4132.13,
+          "mid_timestamp": 4130.53,
+          "screenshot": "screenshots_web_full/sentence_168_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 169,
+          "sentence": "You can look at the Strava data, it will collect some of your data from there and help you pick a plan from Strava.",
+          "start_timestamp": 4132.63,
+          "end_timestamp": 4142.23,
+          "mid_timestamp": 4137.43,
+          "screenshot": "screenshots_web_full/sentence_169_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 170,
+          "sentence": "It's not super advanced analytics, it's just basics.",
+          "start_timestamp": 4142.73,
+          "end_timestamp": 4145.93,
+          "mid_timestamp": 4144.33,
+          "screenshot": "screenshots_web_full/sentence_170_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 171,
+          "sentence": "It looks for it tries to find help you find a plan that works for you.",
+          "start_timestamp": 4146.43,
+          "end_timestamp": 4152.83,
+          "mid_timestamp": 4149.63,
+          "screenshot": "screenshots_web_full/sentence_171_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 172,
+          "sentence": "You can say skip Strava and it asks you your name and your FTP.",
+          "start_timestamp": 4153.33,
+          "end_timestamp": 4158.93,
+          "mid_timestamp": 4156.13,
+          "screenshot": "screenshots_web_full/sentence_172_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 173,
+          "sentence": "Then it asks you a bunch of questions.",
+          "start_timestamp": 4159.43,
+          "end_timestamp": 4162.63,
+          "mid_timestamp": 4161.03,
+          "screenshot": "screenshots_web_full/sentence_173_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 174,
+          "sentence": "Once you've answered all the questions, you say take me to my personalized plan and now I get the coach Jack plan builder.",
+          "start_timestamp": 4163.13,
+          "end_timestamp": 4172.33,
+          "mid_timestamp": 4167.73,
+          "screenshot": "screenshots_web_full/sentence_174_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 175,
+          "sentence": "I can set how long it is.",
+          "start_timestamp": 4172.83,
+          "end_timestamp": 4175.83,
+          "mid_timestamp": 4174.33,
+          "screenshot": "screenshots_web_full/sentence_175_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 176,
+          "sentence": "I can either say it's an event and it's a specific date or I can just say hey I want 16 weeks or six months or 12 weeks.",
+          "start_timestamp": 4176.33,
+          "end_timestamp": 4187.53,
+          "mid_timestamp": 4181.93,
+          "screenshot": "screenshots_web_full/sentence_176_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 177,
+          "sentence": "You can decide which makes sense.",
+          "start_timestamp": 4188.03,
+          "end_timestamp": 4191.03,
+          "mid_timestamp": 4189.53,
+          "screenshot": "screenshots_web_full/sentence_177_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 178,
+          "sentence": "In this case, because it's 32 weeks out, it creates three blocks: a base block, a build block, and a peak block.",
+          "start_timestamp": 4191.53,
+          "end_timestamp": 4200.33,
+          "mid_timestamp": 4195.93,
+          "screenshot": "screenshots_web_full/sentence_178_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 179,
+          "sentence": "You can see here it sets intensity level, it sets the type of plan that it suggests you start with.",
+          "start_timestamp": 4200.83,
+          "end_timestamp": 4208.83,
+          "mid_timestamp": 4204.83,
+          "screenshot": "screenshots_web_full/sentence_179_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 180,
+          "sentence": "Each of these details down here depends on which block you're in.",
+          "start_timestamp": 4209.33,
+          "end_timestamp": 4214.13,
+          "mid_timestamp": 4211.73,
+          "screenshot": "screenshots_web_full/sentence_180_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 181,
+          "sentence": "Now I'll click on the build block and you can see that the serious Italian is selected.",
+          "start_timestamp": 4214.63,
+          "end_timestamp": 4221.43,
+          "mid_timestamp": 4218.03,
+          "screenshot": "screenshots_web_full/sentence_181_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 182,
+          "sentence": "It's a different block type.",
+          "start_timestamp": 4221.93,
+          "end_timestamp": 4224.93,
+          "mid_timestamp": 4223.43,
+          "screenshot": "screenshots_web_full/sentence_182_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 183,
+          "sentence": "It started with a base block, a build block, and then a peak block.",
+          "start_timestamp": 4225.43,
+          "end_timestamp": 4231.03,
+          "mid_timestamp": 4228.23,
+          "screenshot": "screenshots_web_full/sentence_183_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 184,
+          "sentence": "It has hours and duration for each block.",
+          "start_timestamp": 4231.53,
+          "end_timestamp": 4234.73,
+          "mid_timestamp": 4233.13,
+          "screenshot": "screenshots_web_full/sentence_184_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 185,
+          "sentence": "We're in the process of changing that so I'm not going to go into a lot of details right now.",
+          "start_timestamp": 4235.23,
+          "end_timestamp": 4243.23,
+          "mid_timestamp": 4239.23,
+          "screenshot": "screenshots_web_full/sentence_185_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 186,
+          "sentence": "I'll create a new video that updates the coach Jack plan builder soon.",
+          "start_timestamp": 4243.73,
+          "end_timestamp": 4248.93,
+          "mid_timestamp": 4246.33,
+          "screenshot": "screenshots_web_full/sentence_186_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 187,
+          "sentence": "You do have a start date here that's important.",
+          "start_timestamp": 4249.43,
+          "end_timestamp": 4253.03,
+          "mid_timestamp": 4251.23,
+          "screenshot": "screenshots_web_full/sentence_187_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 188,
+          "sentence": "It should normally be next week if you're creating a new plan.",
+          "start_timestamp": 4253.53,
+          "end_timestamp": 4258.33,
+          "mid_timestamp": 4255.93,
+          "screenshot": "screenshots_web_full/sentence_188_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 189,
+          "sentence": "If you're editing a plan, maybe it already had a start date.",
+          "start_timestamp": 4258.83,
+          "end_timestamp": 4263.63,
+          "mid_timestamp": 4261.23,
+          "screenshot": "screenshots_web_full/sentence_189_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 190,
+          "sentence": "You can use the same features, you can have a plan on your calendar, you can click on edit your plan from the calendar or from the my plans.",
+          "start_timestamp": 4264.13,
+          "end_timestamp": 4275.73,
+          "mid_timestamp": 4269.93,
+          "screenshot": "screenshots_web_full/sentence_190_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 191,
+          "sentence": "When you click edit, all this data is filled out, it takes you directly to this page and you can make a modification and it will update your calendar automatically.",
+          "start_timestamp": 4276.23,
+          "end_timestamp": 4288.23,
+          "mid_timestamp": 4282.23,
+          "screenshot": "screenshots_web_full/sentence_191_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 192,
+          "sentence": "You can add days off, you can add events.",
+          "start_timestamp": 4288.73,
+          "end_timestamp": 4292.33,
+          "mid_timestamp": 4290.53,
+          "screenshot": "screenshots_web_full/sentence_192_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 193,
+          "sentence": "Rather than having to recreate your plan as things change, you can actually just recreate modify the plan builder to match your new needs or dates or anything else.",
+          "start_timestamp": 4292.83,
+          "end_timestamp": 4304.43,
+          "mid_timestamp": 4298.63,
+          "screenshot": "screenshots_web_full/sentence_193_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 194,
+          "sentence": "It's not full AI training plans, but it's plans that are easy to adjust to your changes.",
+          "start_timestamp": 4304.93,
+          "end_timestamp": 4311.73,
+          "mid_timestamp": 4308.33,
+          "screenshot": "screenshots_web_full/sentence_194_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 195,
+          "sentence": "You've got initial plan questions here which takes you back to the plans.",
+          "start_timestamp": 4312.23,
+          "end_timestamp": 4317.43,
+          "mid_timestamp": 4314.83,
+          "screenshot": "screenshots_web_full/sentence_195_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 196,
+          "sentence": "When you click save or next, you can then send it to your calendar, download it, or whatever.",
+          "start_timestamp": 4317.93,
+          "end_timestamp": 4325.13,
+          "mid_timestamp": 4321.53,
+          "screenshot": "screenshots_web_full/sentence_196_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 197,
+          "sentence": "You may not want it on your calendar now, you may just want it to go to my plans.",
+          "start_timestamp": 4325.63,
+          "end_timestamp": 4333.23,
+          "mid_timestamp": 4329.43,
+          "screenshot": "screenshots_web_full/sentence_197_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 198,
+          "sentence": "That's the general basis of coach Jack plan builder.",
+          "start_timestamp": 4333.73,
+          "end_timestamp": 4337.33,
+          "mid_timestamp": 4335.53,
+          "screenshot": "screenshots_web_full/sentence_198_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 199,
+          "sentence": "I'll create a separate video for that.",
+          "start_timestamp": 4337.83,
+          "end_timestamp": 4340.83,
+          "mid_timestamp": 4339.33,
+          "screenshot": "screenshots_web_full/sentence_199_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Home",
+      "description": "Now, let's go back to this home page.",
+      "start_sentence": 200,
+      "end_sentence": 200,
+      "start_timestamp": 4341.33,
+      "end_timestamp": 4344.53,
+      "relative_url": "/",
+      "sentences": [
+        {
+          "sentence_id": 200,
+          "sentence": "Now, let's go back to this home page.",
+          "start_timestamp": 4341.33,
+          "end_timestamp": 4344.53,
+          "mid_timestamp": 4342.93,
+          "screenshot": "screenshots_web_full/sentence_200_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Create Workout",
+      "description": "Create workout has a complex editor.",
+      "start_sentence": 201,
+      "end_sentence": 236,
+      "start_timestamp": 4345.03,
+      "end_timestamp": 4620.93,
+      "relative_url": "/workouts/create",
+      "sentences": [
+        {
+          "sentence_id": 201,
+          "sentence": "I will go to create workout.",
+          "start_timestamp": 4345.03,
+          "end_timestamp": 4348.03,
+          "mid_timestamp": 4346.53,
+          "screenshot": "screenshots_web_full/sentence_201_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 202,
+          "sentence": "Create workout has a complex editor.",
+          "start_timestamp": 4348.53,
+          "end_timestamp": 4351.53,
+          "mid_timestamp": 4350.03,
+          "screenshot": "screenshots_web_full/sentence_202_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 203,
+          "sentence": "It's got a lot of features but it's fairly simple because it operates kind of like Excel.",
+          "start_timestamp": 4352.03,
+          "end_timestamp": 4358.83,
+          "mid_timestamp": 4355.43,
+          "screenshot": "screenshots_web_full/sentence_203_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 204,
+          "sentence": "When you click on one of these, you can see down here it turns red for whichever row you're on.",
+          "start_timestamp": 4359.33,
+          "end_timestamp": 4367.33,
+          "mid_timestamp": 4363.33,
+          "screenshot": "screenshots_web_full/sentence_204_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 205,
+          "sentence": "You can name it.",
+          "start_timestamp": 4367.83,
+          "end_timestamp": 4370.83,
+          "mid_timestamp": 4369.33,
+          "screenshot": "screenshots_web_full/sentence_205_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 206,
+          "sentence": "You can turn on slope, cadence type, warm up, cool down, HR.",
+          "start_timestamp": 4371.33,
+          "end_timestamp": 4376.13,
+          "mid_timestamp": 4373.73,
+          "screenshot": "screenshots_web_full/sentence_206_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 207,
+          "sentence": "You can set it to 120.",
+          "start_timestamp": 4376.63,
+          "end_timestamp": 4379.63,
+          "mid_timestamp": 4378.13,
+          "screenshot": "screenshots_web_full/sentence_207_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 208,
+          "sentence": "Now this middle one is actually 120 BPM target rather than ERG.",
+          "start_timestamp": 4380.13,
+          "end_timestamp": 4384.93,
+          "mid_timestamp": 4382.53,
+          "screenshot": "screenshots_web_full/sentence_208_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 209,
+          "sentence": "In our workout, we have something called HR plus.",
+          "start_timestamp": 4385.43,
+          "end_timestamp": 4389.03,
+          "mid_timestamp": 4387.23,
+          "screenshot": "screenshots_web_full/sentence_209_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 210,
+          "sentence": "If you have a smart trainer that automatically controls, this will do is it will automatically control the smart trainer to automatically go to your heart rate being 120%.",
+          "start_timestamp": 4389.53,
+          "end_timestamp": 4401.13,
+          "mid_timestamp": 4395.33,
+          "screenshot": "screenshots_web_full/sentence_210_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 211,
+          "sentence": "Obviously, you have to have a heart rate meter and a smart trainer to make that work.",
+          "start_timestamp": 4401.63,
+          "end_timestamp": 4408.43,
+          "mid_timestamp": 4405.03,
+          "screenshot": "screenshots_web_full/sentence_211_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 212,
+          "sentence": "You can design custom workouts that switch in and out from HR to slope.",
+          "start_timestamp": 4408.93,
+          "end_timestamp": 4414.53,
+          "mid_timestamp": 4411.73,
+          "screenshot": "screenshots_web_full/sentence_212_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 213,
+          "sentence": "Slope mode is and then we can say it's a 1% slope",
+          "start_timestamp": 4415.03,
+          "end_timestamp": 4419.83,
+          "mid_timestamp": 4417.43,
+          "screenshot": "screenshots_web_full/sentence_213_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 214,
+          "sentence": "Let's begin with the new video where we discuss the menu that includes App Plan Source Profile Settings.",
+          "start_timestamp": 4420.33,
+          "end_timestamp": 4427.53,
+          "mid_timestamp": 4423.93,
+          "screenshot": "screenshots_web_full/sentence_214_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 215,
+          "sentence": "The App Plan Source is where the app gets its plan, and there are many different places on the site where you can access this.",
+          "start_timestamp": 4428.03,
+          "end_timestamp": 4438.03,
+          "mid_timestamp": 4433.03,
+          "screenshot": "screenshots_web_full/sentence_215_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 216,
+          "sentence": "Profile Settings can be accessed either from this menu or by clicking on your FTP, where you can view all of these profile settings.",
+          "start_timestamp": 4438.53,
+          "end_timestamp": 4448.13,
+          "mid_timestamp": 4443.33,
+          "screenshot": "screenshots_web_full/sentence_216_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 217,
+          "sentence": "These settings include your FTP, your time zone, your heart rates, your threshold heart rate, the sports you're using in our app, your weight, and your drag coefficient.",
+          "start_timestamp": 4448.63,
+          "end_timestamp": 4459.83,
+          "mid_timestamp": 4454.23,
+          "screenshot": "screenshots_web_full/sentence_217_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 218,
+          "sentence": "The drag coefficient and bike weight are used to help approximate speed and distance.",
+          "start_timestamp": 4460.33,
+          "end_timestamp": 4465.93,
+          "mid_timestamp": 4463.13,
+          "screenshot": "screenshots_web_full/sentence_218_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 219,
+          "sentence": "If you're indoors, the bike weight doesn't matter as it is only used to approximate speed and distance.",
+          "start_timestamp": 4466.43,
+          "end_timestamp": 4473.63,
+          "mid_timestamp": 4470.03,
+          "screenshot": "screenshots_web_full/sentence_219_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 220,
+          "sentence": "The conversion from power to speed is generally controlled by your weight, the weight of your bike, and your aerodynamic drag.",
+          "start_timestamp": 4474.13,
+          "end_timestamp": 4482.53,
+          "mid_timestamp": 4478.33,
+          "screenshot": "screenshots_web_full/sentence_220_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 221,
+          "sentence": "We tend to use a 0.5% slope all the time, which is generally fairly accurate.",
+          "start_timestamp": 4483.03,
+          "end_timestamp": 4489.03,
+          "mid_timestamp": 4486.03,
+          "screenshot": "screenshots_web_full/sentence_221_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 222,
+          "sentence": "The average rider's drag coefficient is about 0.6, although super TT guys can be 0.2 and pros might be around 0.28 on a regular bike.",
+          "start_timestamp": 4489.53,
+          "end_timestamp": 4499.53,
+          "mid_timestamp": 4494.53,
+          "screenshot": "screenshots_web_full/sentence_222_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 223,
+          "sentence": "Normal riders are around 0.5, but if you're a skinny, small guy on a road bike with your back at more than 45 degrees, then you're probably down in the 0.35 to 0.45 range.",
+          "start_timestamp": 4500.03,
+          "end_timestamp": 4513.63,
+          "mid_timestamp": 4506.83,
+          "screenshot": "screenshots_web_full/sentence_223_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 224,
+          "sentence": "Each person is different, and indoors, speed and distance don't really mean anything.",
+          "start_timestamp": 4514.13,
+          "end_timestamp": 4519.33,
+          "mid_timestamp": 4516.73,
+          "screenshot": "screenshots_web_full/sentence_224_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 225,
+          "sentence": "However, many of us like to estimate how far we went, and this feature lets you adjust that so that your indoor intensity matches your outdoor speed.",
+          "start_timestamp": 4519.83,
+          "end_timestamp": 4530.63,
+          "mid_timestamp": 4525.23,
+          "screenshot": "screenshots_web_full/sentence_225_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 226,
+          "sentence": "This method is much more accurate than taking the speed from the smart trainer itself.",
+          "start_timestamp": 4531.13,
+          "end_timestamp": 4537.13,
+          "mid_timestamp": 4534.13,
+          "screenshot": "screenshots_web_full/sentence_226_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 227,
+          "sentence": "We also have heart rate zones that can be adjusted when we convert a power workout to a heart rate workout.",
+          "start_timestamp": 4537.63,
+          "end_timestamp": 4546.03,
+          "mid_timestamp": 4541.83,
+          "screenshot": "screenshots_web_full/sentence_227_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 228,
+          "sentence": "Different people have different relationships between their heart rate and their power, so we took the averages here, which I believe are the Coggen averages.",
+          "start_timestamp": 4546.53,
+          "end_timestamp": 4556.53,
+          "mid_timestamp": 4551.53,
+          "screenshot": "screenshots_web_full/sentence_228_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 229,
+          "sentence": "You can change how that conversion happens, and when we send heart rate zones to Garmin or TrainingPeaks, it's actually sending the whole zone.",
+          "start_timestamp": 4557.03,
+          "end_timestamp": 4566.63,
+          "mid_timestamp": 4561.83,
+          "screenshot": "screenshots_web_full/sentence_229_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 230,
+          "sentence": "It's converting the workout from power to HR%, and then it's taking the HR% and converting that to a Coggen zone and sending that zone to TrainingPeaks and Garmin.",
+          "start_timestamp": 4567.13,
+          "end_timestamp": 4578.73,
+          "mid_timestamp": 4572.93,
+          "screenshot": "screenshots_web_full/sentence_230_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 231,
+          "sentence": "In TrainingPeaks and Garmin, the way you have your zone set there is going to control what you see on your bike computer.",
+          "start_timestamp": 4579.23,
+          "end_timestamp": 4588.43,
+          "mid_timestamp": 4583.83,
+          "screenshot": "screenshots_web_full/sentence_231_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 232,
+          "sentence": "We don't support simple HR workouts in our app; you must have a smart trainer and use HR+, which sets the power intensity for you.",
+          "start_timestamp": 4588.93,
+          "end_timestamp": 4598.93,
+          "mid_timestamp": 4593.93,
+          "screenshot": "screenshots_web_full/sentence_232_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 233,
+          "sentence": "The profile settings are more comprehensive here than in the app, and there are a lot more features.",
+          "start_timestamp": 4599.43,
+          "end_timestamp": 4606.63,
+          "mid_timestamp": 4603.03,
+          "screenshot": "screenshots_web_full/sentence_233_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 234,
+          "sentence": "We also have notifications about new features that come from our forum.",
+          "start_timestamp": 4607.13,
+          "end_timestamp": 4611.93,
+          "mid_timestamp": 4609.53,
+          "screenshot": "screenshots_web_full/sentence_234_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 235,
+          "sentence": "If you click on that, it will take you to our forum.",
+          "start_timestamp": 4612.43,
+          "end_timestamp": 4617.23,
+          "mid_timestamp": 4614.83,
+          "screenshot": "screenshots_web_full/sentence_235_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 236,
+          "sentence": "We also have a feature to search workouts.",
+          "start_timestamp": 4617.73,
+          "end_timestamp": 4620.93,
+          "mid_timestamp": 4619.33,
+          "screenshot": "screenshots_web_full/sentence_236_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Workout Details",
+      "description": "From many pages, such as the calendar or the search workouts page, you can click on the workout and go to workout details.",
+      "start_sentence": 237,
+      "end_sentence": 242,
+      "start_timestamp": 4621.43,
+      "end_timestamp": 4660.73,
+      "relative_url": "/workout-details",
+      "sentences": [
+        {
+          "sentence_id": 237,
+          "sentence": "From many pages, such as the calendar or the search workouts page, you can click on the workout and go to workout details.",
+          "start_timestamp": 4621.43,
+          "end_timestamp": 4630.63,
+          "mid_timestamp": 4626.03,
+          "screenshot": "screenshots_web_full/sentence_237_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 238,
+          "sentence": "Each workout has a unique URL that's shareable with your friends.",
+          "start_timestamp": 4631.13,
+          "end_timestamp": 4635.53,
+          "mid_timestamp": 4633.33,
+          "screenshot": "screenshots_web_full/sentence_238_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 239,
+          "sentence": "Public workouts can be shared with anyone, but private workouts can only be shared with your friends if they are also a paid member.",
+          "start_timestamp": 4636.03,
+          "end_timestamp": 4645.63,
+          "mid_timestamp": 4640.83,
+          "screenshot": "screenshots_web_full/sentence_239_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 240,
+          "sentence": "Each workout has different descriptions, including an indoor description and an outdoor description.",
+          "start_timestamp": 4646.13,
+          "end_timestamp": 4651.33,
+          "mid_timestamp": 4648.73,
+          "screenshot": "screenshots_web_full/sentence_240_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 241,
+          "sentence": "There's also an author's description and interval comments.",
+          "start_timestamp": 4651.83,
+          "end_timestamp": 4655.03,
+          "mid_timestamp": 4653.43,
+          "screenshot": "screenshots_web_full/sentence_241_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 242,
+          "sentence": "I still need to do a deep dive into the create workouts page.",
+          "start_timestamp": 4655.53,
+          "end_timestamp": 4660.73,
+          "mid_timestamp": 4658.13,
+          "screenshot": "screenshots_web_full/sentence_242_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Workout Calculator",
+      "description": "We also have a calculator on this page and on the workout creator page.",
+      "start_sentence": 243,
+      "end_sentence": 259,
+      "start_timestamp": 4661.23,
+      "end_timestamp": 4780.83,
+      "relative_url": "/workout-calculator",
+      "sentences": [
+        {
+          "sentence_id": 243,
+          "sentence": "Each workout also includes information on stress, intensity, popularity, and time.",
+          "start_timestamp": 4661.23,
+          "end_timestamp": 4665.63,
+          "mid_timestamp": 4663.43,
+          "screenshot": "screenshots_web_full/sentence_243_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 244,
+          "sentence": "We also have share features and the ride now feature, which you've already seen.",
+          "start_timestamp": 4666.13,
+          "end_timestamp": 4671.73,
+          "mid_timestamp": 4668.93,
+          "screenshot": "screenshots_web_full/sentence_244_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 245,
+          "sentence": "We also have a copy workout feature, which is the same as it is on the other page.",
+          "start_timestamp": 4672.23,
+          "end_timestamp": 4679.43,
+          "mid_timestamp": 4675.83,
+          "screenshot": "screenshots_web_full/sentence_245_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 246,
+          "sentence": "We also have a calculator on this page and on the workout creator page.",
+          "start_timestamp": 4679.93,
+          "end_timestamp": 4685.53,
+          "mid_timestamp": 4682.73,
+          "screenshot": "screenshots_web_full/sentence_246_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 247,
+          "sentence": "You can use this calculator to estimate your critical power and your W prime.",
+          "start_timestamp": 4686.03,
+          "end_timestamp": 4691.63,
+          "mid_timestamp": 4688.83,
+          "screenshot": "screenshots_web_full/sentence_247_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 248,
+          "sentence": "Critical power is like FTP, but it's a little different as it's a bit shorter, usually around a 20-minute timeframe.",
+          "start_timestamp": 4692.13,
+          "end_timestamp": 4700.13,
+          "mid_timestamp": 4696.13,
+          "screenshot": "screenshots_web_full/sentence_248_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 249,
+          "sentence": "FTP probably more closely aligns theoretically at 60 minutes, but in most people's case, it's probably closer to 40 minutes.",
+          "start_timestamp": 4700.63,
+          "end_timestamp": 4708.63,
+          "mid_timestamp": 4704.63,
+          "screenshot": "screenshots_web_full/sentence_249_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 250,
+          "sentence": "Based on a three-minute duration, I can do 240 Watts, and based on doing 20 minutes for 200 Watts, this is my critical power.",
+          "start_timestamp": 4709.13,
+          "end_timestamp": 4718.73,
+          "mid_timestamp": 4713.93,
+          "screenshot": "screenshots_web_full/sentence_250_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 251,
+          "sentence": "When we apply these things and click on this little switch, I now see these little red dotted lines on the workout.",
+          "start_timestamp": 4719.23,
+          "end_timestamp": 4728.03,
+          "mid_timestamp": 4723.63,
+          "screenshot": "screenshots_web_full/sentence_251_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 252,
+          "sentence": "These lines indicate that this workout is probably harder than I can complete, especially since it's repeated so many times.",
+          "start_timestamp": 4728.53,
+          "end_timestamp": 4736.53,
+          "mid_timestamp": 4732.53,
+          "screenshot": "screenshots_web_full/sentence_252_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 253,
+          "sentence": "If I was a stronger writer and had a higher W prime, this workout would still be extremely difficult because it's repeated so many times.",
+          "start_timestamp": 4737.03,
+          "end_timestamp": 4747.03,
+          "mid_timestamp": 4742.03,
+          "screenshot": "screenshots_web_full/sentence_253_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 254,
+          "sentence": "If I happen to be a 25 kilojoule writer, this would equate to a moderately hard workout.",
+          "start_timestamp": 4747.53,
+          "end_timestamp": 4754.33,
+          "mid_timestamp": 4750.93,
+          "screenshot": "screenshots_web_full/sentence_254_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 255,
+          "sentence": "Any activity performed over FTP reduces the amount of anaerobic power you have remaining.",
+          "start_timestamp": 4754.83,
+          "end_timestamp": 4760.43,
+          "mid_timestamp": 4757.63,
+          "screenshot": "screenshots_web_full/sentence_255_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 256,
+          "sentence": "As you rest, your anaerobic power begins to build back up again, increasing your capacity.",
+          "start_timestamp": 4760.93,
+          "end_timestamp": 4766.93,
+          "mid_timestamp": 4763.93,
+          "screenshot": "screenshots_web_full/sentence_256_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 257,
+          "sentence": "If you have longer rest periods, you will have more capacity.",
+          "start_timestamp": 4767.43,
+          "end_timestamp": 4771.83,
+          "mid_timestamp": 4769.63,
+          "screenshot": "screenshots_web_full/sentence_257_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 258,
+          "sentence": "This is a feature of the W prime balance in Trainer Day.",
+          "start_timestamp": 4772.33,
+          "end_timestamp": 4777.13,
+          "mid_timestamp": 4774.73,
+          "screenshot": "screenshots_web_full/sentence_258_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 259,
+          "sentence": "This video is now coming to an end.",
+          "start_timestamp": 4777.63,
+          "end_timestamp": 4780.83,
+          "mid_timestamp": 4779.23,
+          "screenshot": "screenshots_web_full/sentence_259_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    },
+    {
+      "page_name": "Trainer Day",
+      "description": "You can access Trainer Day, all its pages, the blog, and the forums.",
+      "start_sentence": 260,
+      "end_sentence": 262,
+      "start_timestamp": 4781.33,
+      "end_timestamp": 4799.13,
+      "relative_url": "/trainer-day",
+      "sentences": [
+        {
+          "sentence_id": 260,
+          "sentence": "You can access Trainer Day, all its pages, the blog, and the forums.",
+          "start_timestamp": 4781.33,
+          "end_timestamp": 4786.53,
+          "mid_timestamp": 4783.93,
+          "screenshot": "screenshots_web_full/sentence_260_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 261,
+          "sentence": "The option to log out is available here.",
+          "start_timestamp": 4787.03,
+          "end_timestamp": 4790.23,
+          "mid_timestamp": 4788.63,
+          "screenshot": "screenshots_web_full/sentence_261_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        },
+        {
+          "sentence_id": 262,
+          "sentence": "The process of logging in and out was not demonstrated in this video, but will be covered in a separate video.",
+          "start_timestamp": 4790.73,
+          "end_timestamp": 4799.13,
+          "mid_timestamp": 4794.93,
+          "screenshot": "screenshots_web_full/sentence_262_mid_3146.1s.jpg",
+          "screenshot_timestamp": 3146.13
+        }
+      ]
+    }
+  ]
+}

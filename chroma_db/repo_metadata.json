@@ -359,7 +359,7 @@
     "last_updated": "2025-06-26T10:30:00"
   },
   "main-app-api": {
-    "last_commit": "1b6d68966e6f188bc652af972dba04c76aec20dd",
+    "last_commit": "786b46f98269104af44f61feecb8897c6b1ddb13",
     "file_hashes": {
       "app.json": "f2fa600ee0f37fd8d7c24b76f8e8fd9a03175beafcfd60c198896c006bf0cc48",
       "jest.config.js": "53d96f58869a8b9cd676fc7c65bdabb26e8c71d66442dce5440c2e97b37f11ab",
@@ -599,7 +599,7 @@
       "src/api/turbo/iap/services/google/saveGoogleReceipt.js": "9e573cd8c45f4ca7c6c5b6fa9aa831551fbb66519975bb3cb0b6ab59d7c05ac1",
       "src/api/turbo/services/getMissingStravaActivitiesNames.js": "08ecbd206ad76c98ae197b9a748a123d0445b33900f69eff27e816209a0cec6f",
       "src/api/turbo/services/convertWorkoutStructureForApp.js": "096596f9db0070ba837f51aaa6ef63c339623d2f060e9c1b54be83967810c01b",
-      "src/api/turbo/services/getActivityOnMobile.js": "9a2d84aaebfbabf9001c2c3464baf580b8f29c7bd872b03b97aafb57fb7d4d29",
+      "src/api/turbo/services/getActivityOnMobile.js": "89d739ced59d6cddd5124fb61c7914f8bde856174d2d82a550aa8bd456407b05",
       "src/api/turbo/services/getMissingDropboxActivitiesNames.js": "93b5dcea76efeeef5e9c62e97a2ec33b04cf8fb4e1afcefd99eba332567a17cb",
       "src/api/turbo/services/getLibraryWorkouts.js": "4bf270d6fa687363af0ac77eee28335a95e43d154567eab6c26c688f213ac09a",
       "src/api/turbo/services/getLibraryLists.js": "10a43018ef99d38c13eb86af000951c1c04e87b41e5acdd825fe79ffd60eb8ee",
@@ -725,6 +725,6 @@
       "src/modules/DrawChart.js": "0d42fcd5eb9d056d11428fbdb2f395e56b1f215630296ecd05a1fe8a22b81c73",
       "src/modules/crypto.js": "58c11e7b2d7ee3d746eea57effa7b4156b4d89df153b4dc63dc3441ec428848b"
     },
-    "last_updated": "2025-06-26T10:30:00"
+    "last_updated": "2025-06-27T12:16:39.647420"
   }
 }

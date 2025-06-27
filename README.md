@@ -1,9 +1,10 @@
 # Source Code Vector Database
 
 A ChromaDB-based vector database for semantic search includes data ingestion from
- - multiple GitHub repositories.
- - mixpanel or other user event data 
- - forums
+ - multiple GitHub repositories
+ - MongoDB user data (110,986+ users with incremental sync)
+ - Mixpanel event data (280+ days of data)
+ - Discourse forums (3,000+ topics with complete post data)
  - clicky
  - email?
  - youtube videos?
@@ -12,6 +13,7 @@ A ChromaDB-based vector database for semantic search includes data ingestion fro
  - telegram
  - github issues
 
+/Users/alex/Documents/Projects/td-ai-testing/structured_data
 
 
 
@@ -60,6 +62,8 @@ A ChromaDB-based vector database for semantic search includes data ingestion fro
    - `GITHUB_TOKEN`: For accessing private repositories (optional)
    - `DISCOURSE_API_KEY`: For forum data access
    - `DISCOURSE_API_USERNAME`: Discourse username (usually your admin username)
+   - `MIXPANEL_API_SECRET`: For Mixpanel event data access
+   - MongoDB credentials configured in connection details (see MongoDB section)
 
 ## Usage
 
@@ -67,23 +71,23 @@ A ChromaDB-based vector database for semantic search includes data ingestion fro
 
 ```bash
 # Index repositories for the first time
-python git/index_repos.py https://github.com/your-org/api-project.git https://github.com/your-org/web-project.git
+python git_functions/index_repos.py https://github.com/your-org/api-project.git https://github.com/your-org/web-project.git
 ```
 
 ### Keep Repositories Updated
 
 ```bash
 # Update all repositories with latest changes (recommended)
-python git/update_repos.py
+python git_functions/update_repos.py
 
 # Update specific repository
-python git_incremental_indexer.py --repo main-app-web
+python git_incremental.py --repo main-app-web
 
 # Update all repositories
-python git_incremental_indexer.py --all
+python git_incremental.py --all
 
 # Check for changes without pulling from remote
-python git_incremental_indexer.py --all --no-pull
+python git_incremental.py --all --no-pull
 ```
 
 ### Search Code
@@ -100,13 +104,13 @@ results = vectorizer.search_code("API endpoints", repo_filter="api-project")
 
 ```bash
 # Basic search
-python git/search_cli.py "user authentication"
+python git_functions/search_cli.py "user authentication"
 
 # Search with filters
-python git/search_cli.py "database connection" --repo api-project --num-results 5
+python git_functions/search_cli.py "database connection" --repo api-project --num-results 5
 
 # Show database stats
-python git/search_cli.py "query" --stats
+python git_functions/search_cli.py "query" --stats
 ```
 
 ### Mixpanel Data Download
@@ -211,3 +215,44 @@ Each code chunk includes:
 - "API rate limiting"
 - "user validation logic"
 - "configuration management"
+
+## Features for MongoDB User Data
+
+- Smart incremental user data downloading with automatic change detection
+- SSL certificate-based authentication for secure connections
+- Selective field extraction (username, email, userId, accessLevel, ftp, createdAt)
+- Full and incremental sync modes with merge capabilities
+- Automatic metadata tracking for sync history
+- Support for custom date ranges and forced full downloads
+
+### MongoDB Data Download
+
+```bash
+# Full download of all users (first time)
+python get_mongo_users_incremental.py --full
+
+# Incremental download (default mode) - only new/updated users since last sync
+python get_mongo_users_incremental.py
+
+# Download users updated/created since specific date
+python get_mongo_users_incremental.py --since 2024-06-01
+
+# Check available options
+python get_mongo_users_incremental.py --help
+```
+
+**MongoDB Download Details:**
+- Downloads specific user fields: username, email, userId, accessLevel, ftp, createdAt
+- Uses SSL certificate authentication for secure connections
+- Automatic incremental sync based on updatedAt/createdAt timestamps
+- Merges new users with existing data to avoid duplicates
+- Saves sync metadata for tracking download history
+- Currently handles 110,986+ users efficiently
+
+## MongoDB CONNECTION
+username = douser
+password = <replace-with-your-password>
+host = mongodb+srv://mongodb-production-d1c5b3a1.mongo.ondigitalocean.com
+database = admin
+certificate name: ca-certificate.crt (in the same folder her)
+
