@@ -73,6 +73,7 @@ git/repos/
 
 # Large data files
 mixpanel_data/
+forum_data/
 
 # Temporary files
 *.tmp

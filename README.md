@@ -33,6 +33,15 @@ A ChromaDB-based vector database for semantic search includes data ingestion fro
 - Configurable date ranges for historical data
 - Overwrite option for incomplete data files
 
+## Features for Discourse Forum data
+
+- Complete forum data extraction via Discourse API
+- Downloads topics, posts, categories, and user data
+- Rate-limited API calls to respect Discourse quotas
+- Full download mode for initial data collection
+- Incremental mode (planned for future updates)
+- Privacy-conscious user data handling (no emails)
+
 ## Setup
 
 1. **Install dependencies:**
@@ -49,6 +58,8 @@ A ChromaDB-based vector database for semantic search includes data ingestion fro
 3. **Required API Keys:**
    - `OPENAI_API_KEY`: For generating embeddings
    - `GITHUB_TOKEN`: For accessing private repositories (optional)
+   - `DISCOURSE_API_KEY`: For forum data access
+   - `DISCOURSE_API_USERNAME`: Discourse username (usually your admin username)
 
 ## Usage
 
@@ -119,6 +130,29 @@ python get_mixpanel_data.py --help
 - If June 26 file exists: "Already up to date!" 
 - If June 26 file missing: Downloads June 26 data
 - With `--overwrite-last`: Always re-downloads the last existing file
+
+### Forum Data Download
+
+```bash
+# Full download (recommended for first time)
+python get_forum_data.py --base-url https://your-forum.com --mode full
+
+# Limit the download scope for testing
+python get_forum_data.py --base-url https://your-forum.com --mode full --max-topic-pages 5
+
+# With explicit API credentials
+python get_forum_data.py --base-url https://your-forum.com --api-key your-key --api-username admin
+
+# Check available options
+python get_forum_data.py --help
+```
+
+**Forum Download Details:**
+- Downloads all categories, topics, posts, and user data
+- Respects Discourse API rate limits (60 requests/minute)
+- Saves each topic with all its posts in separate JSON files
+- Privacy-conscious: excludes email addresses from user data
+- Currently supports full download mode (incremental coming soon)
 
 ## Supported Languages
 
