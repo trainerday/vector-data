@@ -17,6 +17,8 @@ def main():
     parser.add_argument("--chunk-size", type=int, help="Audio chunk size in MB", default=20)
     parser.add_argument("--no-screenshots", action="store_true", help="Skip screenshot extraction")
     parser.add_argument("--no-ai", action="store_true", help="Skip AI analysis")
+    parser.add_argument("--no-dedup", action="store_true", help="Skip screenshot deduplication")
+    parser.add_argument("--basic-ai", action="store_true", help="Use basic AI analysis instead of enhanced segment analysis")
     parser.add_argument("--skip-transcription", action="store_true", help="Skip transcription and use existing files")
     parser.add_argument("--status", action="store_true", help="Check processing status only")
     
@@ -51,7 +53,9 @@ def main():
             chunk_size_mb=args.chunk_size,
             include_screenshots=not args.no_screenshots,
             include_ai_analysis=not args.no_ai,
-            skip_transcription=args.skip_transcription
+            skip_transcription=args.skip_transcription,
+            cleanup_duplicate_screenshots=not args.no_dedup,
+            use_enhanced_segment_analysis=not args.basic_ai
         )
         
         # Print results summary

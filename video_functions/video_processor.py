@@ -19,6 +19,8 @@ from .page_detector import PageDetector
 from .gpt_page_detector import GPTPageDetector
 from .ai_analyzer import AIAnalyzer
 from .sitemap_generator import SitemapGenerator
+from .enhanced_segment_analyzer import EnhancedSegmentAnalyzer
+from .screenshot_deduplicator import ScreenshotDeduplicator
 
 class VideoProcessor:
     def __init__(self, video_path: str, output_dir: str = "video_processing"):
@@ -35,6 +37,8 @@ class VideoProcessor:
         self.gpt_page_detector = GPTPageDetector()
         self.ai_analyzer = AIAnalyzer()
         self.sitemap_generator = SitemapGenerator()
+        self.enhanced_segment_analyzer = EnhancedSegmentAnalyzer()
+        self.screenshot_deduplicator = ScreenshotDeduplicator()
         
         # Create output directories
         self.output_dir.mkdir(exist_ok=True)
@@ -46,7 +50,9 @@ class VideoProcessor:
         chunk_size_mb: int = 20,
         include_screenshots: bool = True,
         include_ai_analysis: bool = True,
-        skip_transcription: bool = False
+        skip_transcription: bool = False,
+        cleanup_duplicate_screenshots: bool = True,
+        use_enhanced_segment_analysis: bool = True
     ) -> Dict:
         """
         Complete video processing pipeline
@@ -57,6 +63,7 @@ class VideoProcessor:
             include_screenshots: Whether to extract screenshots
             include_ai_analysis: Whether to run AI analysis on screenshots
             skip_transcription: Whether to skip transcription and use existing files
+            cleanup_duplicate_screenshots: Whether to delete duplicate screenshots and update references
         
         Returns:
             Processing results summary
@@ -158,30 +165,62 @@ class VideoProcessor:
         
         # Step 9: AI analysis (if enabled)
         if include_ai_analysis and include_screenshots:
-            print("\n--- AI Analysis Phase ---")
-            enhanced_pages = self.ai_analyzer.analyze_pages_with_ai(
-                pages, self.transcription_dir, self.transcription_dir
-            )
+            if use_enhanced_segment_analysis:
+                print("\n--- Enhanced Segment Analysis Phase ---")
+                # First generate basic sitemap
+                temp_sitemap = self.sitemap_generator.generate_final_sitemap(
+                    pages, common_elements, self.transcription_dir,
+                    final_output_dir=Path("video_final_data"),
+                    video_name=self.video_path.stem,
+                    processing_metadata={
+                        "video_file": str(self.video_path),
+                        "audio_file": str(audio_path),
+                        "include_screenshots": include_screenshots,
+                        "include_ai_analysis": False  # Will be set to True after enhancement
+                    }
+                )
+                
+                # Deduplicate screenshots before AI analysis
+                if cleanup_duplicate_screenshots:
+                    print("\\n--- Screenshot Deduplication ---")
+                    self.screenshot_deduplicator.deduplicate_screenshots(
+                        Path("video_final_data") / f"{self.video_path.stem}_site_map.json"
+                    )
+                
+                # Run enhanced segment analysis
+                enhanced_sitemap = self.enhanced_segment_analyzer.analyze_visual_segments(
+                    Path("video_final_data") / f"{self.video_path.stem}_site_map.json"
+                )
+                enhanced_pages = enhanced_sitemap.get('pages', [])
+            else:
+                print("\n--- Basic AI Analysis Phase ---")
+                enhanced_pages = self.ai_analyzer.analyze_pages_with_ai(
+                    pages, self.transcription_dir, self.transcription_dir, cleanup_duplicate_screenshots
+                )
         else:
             print("\n--- Skipping AI Analysis ---")
             enhanced_pages = pages
         
-        # Step 10: Generate final sitemap
-        print("\n--- Sitemap Generation Phase ---")
+        # Step 10: Generate final sitemap (if not already done by enhanced analysis)
         final_output_dir = Path("video_final_data")
         video_name = self.video_path.stem
         
-        final_sitemap = self.sitemap_generator.generate_final_sitemap(
-            enhanced_pages, common_elements, self.transcription_dir,
-            final_output_dir=final_output_dir,
-            video_name=video_name,
-            processing_metadata={
-                "video_file": str(self.video_path),
-                "audio_file": str(audio_path),
-                "include_screenshots": include_screenshots,
-                "include_ai_analysis": include_ai_analysis
-            }
-        )
+        if include_ai_analysis and include_screenshots and use_enhanced_segment_analysis:
+            print("\n--- Using Enhanced Sitemap ---")
+            final_sitemap = enhanced_sitemap
+        else:
+            print("\n--- Sitemap Generation Phase ---")
+            final_sitemap = self.sitemap_generator.generate_final_sitemap(
+                enhanced_pages, common_elements, self.transcription_dir,
+                final_output_dir=final_output_dir,
+                video_name=video_name,
+                processing_metadata={
+                    "video_file": str(self.video_path),
+                    "audio_file": str(audio_path),
+                    "include_screenshots": include_screenshots,
+                    "include_ai_analysis": include_ai_analysis
+                }
+            )
         
         # Step 11: Generate legacy format
         legacy_sitemap = self.sitemap_generator.create_legacy_format(

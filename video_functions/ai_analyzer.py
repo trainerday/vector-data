@@ -7,18 +7,22 @@ Analyze screenshots with OpenAI Vision API to enhance page descriptions
 import json
 import base64
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
+import cv2
+import numpy as np
+from skimage.metrics import structural_similarity as ssim
 
 load_dotenv()
 
 class AIAnalyzer:
     def __init__(self):
         self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        self.similarity_threshold = 0.90  # 90% similarity threshold
     
-    def analyze_pages_with_ai(self, pages: List[Dict], base_output_dir: Path, output_dir: Path) -> List[Dict]:
+    def analyze_pages_with_ai(self, pages: List[Dict], base_output_dir: Path, output_dir: Path, cleanup_duplicates: bool = False) -> List[Dict]:
         """
         Analyze pages with OpenAI Vision to enhance descriptions
         
@@ -26,6 +30,7 @@ class AIAnalyzer:
             pages: List of page data with sentences and screenshots
             base_output_dir: Base directory containing screenshots
             output_dir: Directory to save enhanced results
+            cleanup_duplicates: Whether to delete duplicate screenshots and update references
         
         Returns:
             List of enhanced page data
@@ -43,14 +48,52 @@ class AIAnalyzer:
                     page['sentences'][0], base_output_dir
                 )
             
+            # Find unique screenshots for this page
+            unique_screenshots = self._find_unique_screenshots(page['sentences'], base_output_dir)
+            print(f"  Will analyze {len(unique_screenshots)} unique screenshots out of {len(page['sentences'])} total")
+            
+            # Create analysis cache for duplicates
+            analysis_cache = {}
+            
+            # Analyze unique screenshots
+            for unique_idx, unique_sentence in unique_screenshots:
+                print(f"  Analyzing unique screenshot {unique_idx}")
+                analysis = self._analyze_screenshot_with_context(unique_sentence, page, base_output_dir)
+                analysis_cache[unique_sentence.get('screenshot')] = analysis
+            
+            # Build enhanced sentences, reusing analysis for similar screenshots
             enhanced_sentences = []
             
             for sent_idx, sentence in enumerate(page['sentences']):
-                if sent_idx % 5 == 0:  # Progress update every 5 sentences
-                    print(f"  Analyzing sentence {sent_idx + 1}/{len(page['sentences'])}")
+                screenshot_path = sentence.get('screenshot')
                 
-                # Analyze screenshot with context
-                analysis = self._analyze_screenshot_with_context(sentence, page, base_output_dir)
+                # Find the best matching analysis from cache
+                analysis = None
+                if screenshot_path and screenshot_path in analysis_cache:
+                    # Exact match
+                    analysis = analysis_cache[screenshot_path]
+                else:
+                    # Find similar screenshot analysis
+                    if screenshot_path:
+                        current_img_path = base_output_dir / screenshot_path
+                        if current_img_path.exists():
+                            best_similarity = 0.0
+                            best_analysis = None
+                            
+                            for cached_screenshot, cached_analysis in analysis_cache.items():
+                                cached_img_path = base_output_dir / cached_screenshot
+                                if cached_img_path.exists():
+                                    similarity = self._calculate_image_similarity(current_img_path, cached_img_path)
+                                    if similarity >= self.similarity_threshold and similarity > best_similarity:
+                                        best_similarity = similarity
+                                        best_analysis = cached_analysis
+                            
+                            if best_analysis:
+                                analysis = best_analysis
+                                print(f"  Sentence {sent_idx}: reusing analysis (similarity: {best_similarity:.2%})")
+                
+                if not analysis:
+                    analysis = self._create_empty_analysis()
                 
                 # Create enhanced sentence structure
                 enhanced_sentence = {
@@ -77,6 +120,10 @@ class AIAnalyzer:
             
             enhanced_pages.append(enhanced_page)
         
+        # Clean up duplicate screenshots if requested
+        if cleanup_duplicates:
+            enhanced_pages = self._cleanup_duplicate_screenshots(enhanced_pages, base_output_dir)
+        
         # Save enhanced pages
         output_path = output_dir / "ai_enhanced_pages.json"
         with open(output_path, 'w') as f:
@@ -84,6 +131,8 @@ class AIAnalyzer:
         
         print(f"\n✅ AI analysis complete!")
         print(f"Enhanced pages saved to: {output_path}")
+        if cleanup_duplicates:
+            print("✅ Duplicate screenshots cleaned up!")
         
         return enhanced_pages
     
@@ -229,3 +278,129 @@ class AIAnalyzer:
             "page_features": [],
             "interaction_context": ""
         }
+    
+    def _calculate_image_similarity(self, img1_path: Path, img2_path: Path) -> float:
+        """Calculate structural similarity between two images"""
+        try:
+            # Load images
+            img1 = cv2.imread(str(img1_path))
+            img2 = cv2.imread(str(img2_path))
+            
+            if img1 is None or img2 is None:
+                return 0.0
+            
+            # Convert to grayscale
+            gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
+            gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+            
+            # Resize to same dimensions if needed
+            if gray1.shape != gray2.shape:
+                h, w = min(gray1.shape[0], gray2.shape[0]), min(gray1.shape[1], gray2.shape[1])
+                gray1 = cv2.resize(gray1, (w, h))
+                gray2 = cv2.resize(gray2, (w, h))
+            
+            # Calculate SSIM
+            similarity, _ = ssim(gray1, gray2, full=True)
+            return similarity
+            
+        except Exception as e:
+            print(f"Error calculating image similarity: {e}")
+            return 0.0
+    
+    def _find_unique_screenshots(self, sentences: List[Dict], base_output_dir: Path) -> List[Tuple[int, Dict]]:
+        """Find unique screenshots by comparing similarity, return list of (index, sentence) tuples"""
+        unique_screenshots = []
+        processed_images = []
+        
+        print(f"Analyzing {len(sentences)} screenshots for similarity...")
+        
+        for idx, sentence in enumerate(sentences):
+            if not sentence.get('screenshot'):
+                continue
+                
+            screenshot_path = base_output_dir / sentence['screenshot']
+            if not screenshot_path.exists():
+                continue
+            
+            # Compare with all previously processed images
+            is_unique = True
+            for processed_path, _ in processed_images:
+                similarity = self._calculate_image_similarity(screenshot_path, processed_path)
+                if similarity >= self.similarity_threshold:
+                    print(f"  Screenshot {idx}: {similarity:.2%} similar to existing - SKIPPING")
+                    is_unique = False
+                    break
+            
+            if is_unique:
+                unique_screenshots.append((idx, sentence))
+                processed_images.append((screenshot_path, sentence))
+                print(f"  Screenshot {idx}: UNIQUE - will analyze")
+        
+        print(f"Found {len(unique_screenshots)} unique screenshots out of {len(sentences)} total")
+        return unique_screenshots
+    
+    def _cleanup_duplicate_screenshots(self, enhanced_pages: List[Dict], base_output_dir: Path) -> List[Dict]:
+        """Clean up duplicate screenshots and update references"""
+        print("Cleaning up duplicate screenshots...")
+        
+        # Build similarity mapping
+        all_screenshots = []
+        for page in enhanced_pages:
+            for sentence in page['sentences']:
+                if sentence.get('screenshot'):
+                    all_screenshots.append(sentence['screenshot'])
+        
+        # Find representatives for each group of similar screenshots
+        representatives = {}  # similar_screenshot -> representative_screenshot
+        files_to_delete = set()
+        
+        processed_screenshots = []
+        
+        for screenshot in all_screenshots:
+            screenshot_path = base_output_dir / screenshot
+            if not screenshot_path.exists():
+                continue
+                
+            # Find if this screenshot is similar to any processed one
+            representative = screenshot
+            for processed_screenshot in processed_screenshots:
+                processed_path = base_output_dir / processed_screenshot
+                if processed_path.exists():
+                    similarity = self._calculate_image_similarity(screenshot_path, processed_path)
+                    if similarity >= self.similarity_threshold:
+                        representative = processed_screenshot
+                        files_to_delete.add(screenshot_path)
+                        break
+            
+            representatives[screenshot] = representative
+            
+            if representative == screenshot:
+                processed_screenshots.append(screenshot)
+        
+        # Delete duplicate files
+        deleted_count = 0
+        for file_path in files_to_delete:
+            try:
+                file_path.unlink()
+                deleted_count += 1
+            except Exception as e:
+                print(f"Warning: Could not delete {file_path}: {e}")
+        
+        print(f"Deleted {deleted_count} duplicate screenshot files")
+        
+        # Update all references in the enhanced pages
+        updated_pages = []
+        for page in enhanced_pages:
+            updated_sentences = []
+            for sentence in page['sentences']:
+                updated_sentence = sentence.copy()
+                if sentence.get('screenshot') and sentence['screenshot'] in representatives:
+                    updated_sentence['screenshot'] = representatives[sentence['screenshot']]
+                updated_sentences.append(updated_sentence)
+            
+            updated_page = page.copy()
+            updated_page['sentences'] = updated_sentences
+            updated_pages.append(updated_page)
+        
+        print(f"Updated {len(all_screenshots)} screenshot references")
+        return updated_pages
